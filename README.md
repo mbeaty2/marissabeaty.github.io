@@ -1,5 +1,6 @@
-# cci-student.github.io
-Template repository for a personal website.
+# marissabeaty.github.io
+
+Here is my personal website hosted through github. This website was created as a part of the Data Science for the Creative Industries course at UAL's Creative Computing Institute. Below are the instructions followed to create this website:
 
 Create a new repository using this template and rename it to [yourusername].github.io, then clone it to your machine. 
 
