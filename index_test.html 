@@ -1,0 +1,292 @@
+#define the document type and set up basic structure 
+
+<!DOCTYPE html>
+<html lang="en"> #tells the website will be in english
+    <head>  #creates a header 
+        <meta charset="utf-8" /> #
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <!--CSS Styles-->
+<!-- add in other packages such as icons, css files, etc. -->
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!--Favicons-->
+        <link
+            rel="icon name"
+            sizes="180x180"
+            href="icon location"
+        />
+
+        <!--Animate CSS CDN-->
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+
+        <title>Marissa Beaty | Data Scientist & Machine Learning Engineer</title>
+    </head>
+
+    <body>
+    <!-- Navbar -->
+    <nav>
+        <h1 >Marissa Beaty</h1>
+        <ul class=""navigation">
+            <li><a href = "#projects" class="nav-link">Projects</a></li>
+            <li><a href = "#tableau" class="nav-link">Tableau</a></li>
+            <li><a href = "#about" class="nav-link">About</a></li>
+        </ul>
+        <button class="burger-menu" id="burger-menu">
+            <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
+    </nav>
+
+    <section class="hero" id="about">
+        <img 
+            src="images/headshot.png"
+            alt="Marissa Beaty"
+            loading="lazy"
+            class="hero-img"
+            />
+        <div class="bio animate__animated animate__shakeX">
+            <h2 class="bio-title">About Me</h2>
+            <p class="bio-description">
+              I'm Marissa, a recent graduate of the MSc in Data Science and Artificial Intelligence at the University of the Arts London. I have a unique blend of backgrounds in data, mathematics, english, and art history, which fuels my passion for blending creative thinking and excellent communication with data analytics, machine learning, and their applications.
+
+              I thrive on unraveling complexity and finding innovative solutions through data science and machine learning, but I also like to make time for the finer things in life and enjoy traveling, baking, and reading in my free-time. If you need any book recommendations or birthday cakes, I'm there! When it comes to data science and AI, I'm eager to embrace the continuous learning in this ever-evolving field and explore the boundless opportunities it has to offer. The possibilities are endless, and I can't wait to see where this data-driven adventure takes me next!
+            </p>
+        </div>
+    </section>
+
+    <!-- section class="more-about"> 
+        <h2>More About Me</h2>
+        <p>
+            More info about me and who I am.
+        </p>
+    </section> -->
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+        <h2 class="skill-header">My Top Skills</h2>
+
+        <div class="skills-wrapper">
+            <div class="first-set animate__animated animate__pulse">
+                <img
+                 src="image link"
+                 alt=""
+                 loading="lazy"
+                 class="icon icon-card"
+                />
+                <img
+                 src="image link"
+                 alt=""
+                 loading="lazy"
+                 class="icon icon-card"
+                />
+                <img
+                 src="image link"
+                 alt=""
+                 loading="lazy"
+                 class="icon icon-card"
+                />
+            </div>
+
+            <div class="second-set animate__animated animate__pulse">
+                <img
+                 src="image link"
+                 alt=""
+                 loading="lazy"
+                 class="icon icon-card"
+                />
+                <img
+                 src="image link"
+                 alt=""
+                 loading="lazy"
+                 class="icon icon-card"
+                />
+                <img
+                 src="image link"
+                 alt=""
+                 loading="lazy"
+                 class="icon icon-card"
+                />
+            </div>
+        </div>
+        </section>
+
+    <!-- Projects -->
+
+    <section class="projects" id="projects">
+        <h2 class="projects-title">Recent Projects</h2>
+        <div class="project-container">
+            <div class="project-container project-card">
+                <i class="fa-solid fa-earth-europe" style="color: #e63b7a;"></i>
+                <h3 class="project-title">Envisioning Distant Worlds: Fine-Tuning a Latent Diffusion Model with NASA's Exoplanet Data</h3>
+                <p class="project-details">
+                  There are some 5,500 confirmed Exoplanets beyond our solar system. Though we know these planets exist, most of them are too far away for us to know what they look like. In this project, I developed an algorithm and a model to translate any given exoplanet’s numeric data into a text prompt that can be input into a trained latent diffusion model to generate a predictive visualization of that exoplanet. This research describes a novel approach of translating numeric data to textual descriptors formulated from prior accepted astrophysical research. These textual descriptions are paired with photographs and artistic visualizations from NASA’s public archives to build a training set for a latent diffusion model, which can produce new visualizations of unseen distant worlds.
+                </p>
+                <a href="https://github.com/mbeaty2/thesis" target="_blank" class="project-link">Check it Out</a>
+            </div>
+            <div class="project-container project-card">
+                <i class="fa-brands fa-spotify" style="color: #ff8647;"></i>
+                <h3 class="project-title">
+                  Content Based Generation: Bridging the Gap Between Books and Music with Literary Song Recommendations</h3>
+                <p class="project-details">
+                  This project aimed to develop a recommendation system that suggests songs based on the content of a book. By using Spotify's API, four essential song features were adapted to the text: Speechiness, Instrumentalness, Valence, and Energy. Speechiness, representing the wordiness in the text, was determined through the ratio of stop words to total words. Instrumentalness, which proved challenging to define for a book, was calculated by comparing the book's word count to the average word count for various book types. Valence, reflecting the book's sentiment, was assessed using a pre-trained sentiment analysis tool. Energy, a more complex feature, was approximated by comparing word vectors of the book's genres. The results demonstrated the feasibility of linking literature and music and underscored the role of preconceived notions in the interpretation of book-to-song associations, offering room for future refinements and additional features.
+                </p>
+                <a href="https://github.com/mbeaty2/book-to-song-generator" target="_blank" class="project-link">Check it Out</a>
+            </div>
+            <div class="project-container project-card">
+                <i class="fa-solid fa-magnifying-glass-chart" style="color: #ffd877;"></i>
+                <h3 class="project-title">Data Exploration with Regression</h3>
+                <p class="project-details">
+                  In this project assignment, the objective was to analyze a dataset containing a list of the Top 100 most streamed songs on Spotify, focusing on three numeric variables: beats per minute (BPS), danceability, and valence. The study aimed to explore the relationships between these variables through various regression models. The project began with an initial data exploration, including examining the data's summary statistics and identifying any potential outliers. Subsequently, the project proceeded to assess the relationships between BPS and danceability, and later incorporated valence to investigate its correlation with both BPS and danceability. A Linear Regression model was employed to predict valence based on BPS and danceability, using data from the dataset.
+                </p>
+                <a href="https://github.com/mbeaty2/understanding-and-manipulating-big-data" target="_blank" class="project-link">Check it Out</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tableau -->
+
+    <section class="tableau" id="tableau">
+      <h2 class="projects-title">Data Visualizations with Tableau</h2>
+      <div class="project-container">
+          <div class="project-container project-card">
+              <i class="fa-solid fa-tv" style="color: #ffb43f;"></i>
+              <h3 class="project-title">Exploring Seinfeld Episodes</h3>
+              <p class="project-details">
+              This project utilizes a dataset from Kaggle, accessible at https://www.kaggle.com/datasets/bcruise/seinfeld-episodes?select=seinfeld_episodes.csv, to conduct an in-depth analysis of "Seinfeld" TV series episodes. The analysis encompasses several critical dimensions, including the distribution of episodes per season, viewership statistics for each season in the U.S., and an exploration of the directors' names and the number of shows they were involved in. By delving into these facets, the project provides valuable insights into the show's evolution, popularity over time, and the creative personnel shaping its production. This analysis serves as a valuable resource for fans and researchers interested in gaining a deeper understanding of the iconic "Seinfeld" series and its behind-the-scenes dynamics.
+
+              This project was inspired by: https://www.youtube.com/watch?v=RHwa5LHANVM  
+              </p>
+              <a href="https://public.tableau.com/views/Seinfelddata/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank" class="project-link">Check it Out</a>
+          </div>
+          <div class="project-container project-card">
+              <i class="fa-solid fa-sack-dollar" style="color: #e63b7a;"></i>
+              <h3 class="project-title">
+                Analyzing Billionaire Data</h3>
+              <p class="project-details">
+                This project relies on a dataset available on Kaggle (accessible via this link: https://www.kaggle.com/datasets/nelgiriyewithana/billionaires-statistics-dataset) to conduct a comprehensive analysis of billionaire statistics. The analysis covers multiple critical dimensions, including final worth by industry, final worth by country, the ratio of self-made billionaires to those who inherited their wealth, gender disparities among billionaires, and the relationship between a billionaire's final worth and the GDP of their country. By examining these aspects, the project aims to provide valuable insights into the distribution of wealth, the factors contributing to billionaires' success, and the economic disparities on a global scale. This analysis has the potential to inform policymakers, economists, and researchers interested in understanding the dynamics of wealth accumulation and its broader implications in the world of billionaires.
+              </p>
+              <a href="https://public.tableau.com/views/billionairedata_16980684935660/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank" class="project-link">Check it Out</a>
+          </div>
+          <div class="project-container project-card">
+            <i class="fa-solid fa-film" style="color: #ffd877;"></i>
+              <h3 class="project-title">An In-Depth Look of Netflix Data</h3>
+              <p class="project-details">
+                This project is a comprehensive exploration of Netflix's movie and TV show content, with a primary focus on understanding the interrelationships between ratings, genres, and the country of origin. The dataset employed for this analysis is accessible through the following link: https://github.com/DataScienceRoadMapDSRM/Tableau-Dashboards-info/blob/main/netflix_titles.csv.
+
+                The project encompasses various vital components: Ratings Analysis, which scrutinizes how Netflix rates its content; Genres Analysis, examining genre prevalence among their movie options; and Country Analysis, studying the distribution and trends of content from different countries. The dataset serves as a valuable resource, providing insights into Netflix's extensive library of movies and TV shows. This analysis can aid Netflix in optimizing its content offerings, understanding viewer preferences, and making informed decisions regarding content creation and distribution strategies in a dynamic and highly competitive streaming media landscape.
+                
+                This project was based off the following video: https://www.youtube.com/watch?v=BTArwS4ljC4&pp=ygUQdGFibGVhdSBwcm9qZWN0cw%3D%3D&themeRefresh=1
+              </p>
+              <a href="https://public.tableau.com/views/NetflixMovieandTVShowData_16979092214720/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank" class="project-link">Check it Out</a>
+          </div>
+          <div class="project-container project-card">
+            <i class="fa-brands fa-airbnb" style="color: #d357fe;"></i>
+            <h3 class="project-title">AirBnB Price and Location Data</h3>
+            <p class="project-details">
+              This project is a comprehensive analysis of the Airbnb market, encompassing pricing, location, and property size to uncover potential opportunities for market entry. Utilizing a dataset available on Kaggle (accessible at this link: https://www.kaggle.com/datasets/alexanderfreberg/airbnb-listings-2016-dataset), the study examines various facets of the Airbnb ecosystem. Pricing analysis is a key focus, delving into how hosts on Airbnb can determine the rates for their listings, taking into account factors such as location, property type, and number of bedrooms. Location analysis is equally pivotal, as it explores the geographic and neighborhood dynamics that affect demand and pricing. Additionally, the project investigates property size, recognizing its significant impact on traveler preferences. By scrutinizing data related to these three aspects, the project aims to provide insights and valuable information for individuals and businesses looking to enter the Airbnb market. This analysis can inform strategic decisions about property investments, pricing strategies, and market entry approaches, ultimately increasing the chances of success in this dynamic marketplace.
+
+              This project was based off the following video: https://www.youtube.com/watch?v=zOR0-nygfDE
+            </p>
+            <a href="https://public.tableau.com/views/AirBnBpriceandlocationinformation/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank" class="project-link">Check it Out</a>
+        </div>
+      </div>
+  </section>
+
+    <!-- SQL -->
+
+    <!-- Contact-->
+    <section class="contact" id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-form-container">
+          <div class="contact-form">
+            <form action="https://formspree.io/f/xnqkwzbn" method="POST">
+              <div class="form-control">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="sender-name"
+                  placeholder="Enter Your Name"
+                  class="input-field"
+                  required
+                />
+              </div>
+              <div class="form-control">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="sender-email"
+                  placeholder="Enter Your Email"
+                  class="input-field"
+                  required
+                />
+              </div>
+              <div class="form-control">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  cols="60"
+                  rows="10"
+                  placeholder="Enter Your Message"
+                  name="message"
+                  class="input-field"
+                  required
+                ></textarea>
+              </div>
+              <input
+                type="submit"
+                value="Submit"
+                id="submit-btn"
+                class="submit-btn"
+              />
+            </form>
+          </div>
+        </div>
+      </section>
+
+    <div class="socials">
+        <a href="https://www.instagram.com/marissa_beaty/" target="_blank">
+          <i class="fab fa-instagram" style="color: #e63b7a;"></i>
+      /></a>
+      <a href="https://www.linkedin.com/in/marissa-beaty-983280160/" target="_blank">
+        <i class="fa-brands fa-linkedin" style="color: #ffd877;"></i>
+      /></a>
+      <a href="https://github.com/mbeaty2" target="_blank">
+          <i class="fa-brands fa-github" style="color: #ff8647;"></i>
+      /></a>
+
+    <!-- Scroll to top -->
+    <!-- <i class="scroll=up" id="scroll-up">
+        <img
+            src="assets/icons/icons8-upward-arrow.gif"
+            class="sociocon up-arrow"
+            alt="scroll-iup" />
+    </i> -->
+
+    <!-- Footer Section -->
+    <footer>
+        <p class="copy">&copy; Copyright 2023</p>
+        <p class="copy">
+            Built with &#x2661; by Marissa Beaty
+        </p>
+    </footer>
+
+    <!-- Website scripts --> 
+    <!-- <script src="assets/js/app.js"></script> -->
+
+    <!-- icon scripts --> 
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    </body> 
+</html>
