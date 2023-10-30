@@ -1,272 +1,412 @@
-<!doctype html>
-<html lang=""en-US>
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
 
-<head>
-  <meta charset="utf-8" /> 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Marissa Beaty | Data Scientist & Machine Learning Engineer</title>
+/* Variables */
+:root {
+    --font-family: "Roboto", sans-serif;
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --bg-color: #FFFFFF;
+    --primary-color: #D62246;
+    --secondary-color: #119DA4;
+    --primary-shadow: #A62639;
+    --secondary-shadow: #210124;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+}
+/* Variables end */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration:none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 5pc rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+    color: var(--primary-color);
+}
+
+nav a {
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul {
+    display: flex;
+    gap: 1.9rem;
+}
+
+nav ul li {
+    font-weight: var(--bold-font);
+}
+
+.burger-menu {
+    color: var(--primary-color);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 68.75rem;
+    margin: auto;
+}
+
+.hero img {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    padding: 1.0rem;
+}
+
+.bio {
+    width: 25rem;
+    padding: 0.625rem;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+}
+
+.bio h1 {
+    margin-bottom: var(--bottom-margin);
+}
+
+.bio p {
+    line-height: var(--line-height);
+    padding:0.3rem 0;
+}
+
+.more-about {
+    background-color: var(--background-color);
+    padding: 3rem 3rem;
+}
+
+.more-about h2 {
+    margin-bottom: var(--bottom-margin);
+    text-align: center;
+}
+
+.more-about p {
+    line-height: var(--line-height);
+    padding: 0.4rem;
+}
+
+.skills {
+    max-width: 68.75rem;
+    margin: auto;
+    text-align: center;
+    background-color: lavenderblush;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-header {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, fr);
+    gap: 5px; /* Adjust the gap between the rows */
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    gap: 5px; /* Adjust the gap between the icons in each row */
+}
+
+.icon-box {
+    width: 12rem; /* Adjust the width to your preference */
+    height: 12rem; /* Adjust the height to your preference */
+    background-color: #fff; /* Background color for the box */
+    border-radius: 11px; /* Add rounded corners */
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    text-align: center; /* Center the content horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    align-items: center;
+    margin: 10px; /* Adjust the margin between boxes */
+}
+
+.icon-box i,
+.icon-box img {
+    font-size: 8rem; 
+    color: #e63b7a; 
+}
+
+.icon-box p {
+    margin: 0.75rem;
+}
+
+.projects {
+    background-color: var(--bg-color);
+    padding: 32px;
+    margin-top: 2rem;
+}
+
+.projects h2 {
+    text-align: center;
+}
+
+.project-pic {
+    width: 65%;
+    height: 60%;
+}
+
+.project-container {
+    display: flex;
+    grid-template-columns: repeat(3, fr); /* Three columns with equal width */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.project-container p {
+    padding: 0.4rem;
+}
+
+.project-title {
+    margin-bottom: var(--bottom-margin);
+}
+
+.project-details {
+    margin-bottom: var(--bottom-margin);
+}
+
+.project-card {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 20px;
+    margin: 10px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+.project-card i {
+    font-size: 5rem; 
+    padding-bottom: 1rem;
+}
   
-  <link rel="stylesheet" href="css/style.css" />
+.tableau {
+background-color: var(--bg-color);
+justify-content: center;
+align-items: center;
+background-color: lavender;
+padding: 1rem;
+}
 
-  <!--Favicons-->
-  <link
-  rel="icon name"
-  sizes="180x180"
-  href="icon location"
-  />
+.tableau h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
 
-  <script src="https://kit.fontawesome.com/b36c785be0.js" crossorigin="anonymous"></script>
+.tableau-container {
+display: grid;
+grid-template-columns: repeat(2, 1fr); 
+gap: 10px; 
+justify-content: center;
+align-content: center; 
+}
 
-  <!--Animate CSS CDN-->
-  <link rel="stylesheet" 
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+.tableau-card {
+text-align: center;
+background-color: #fff;
+border-radius: 11px;
+box-shadow: 0 3px 10px var(--secondary-shadow);
+padding: 20px;
+margin: 10px;
+}
 
-  <body>
-  <nav>
-    <h1 >Marissa Beaty</h1>
-    <ul class=""navigation">
-        <li><a href = "#skills" class="nav-link">Skills</a></li>
-        <li><a href = "#projects" class="nav-link">Projects</a></li>
-        <li><a href = "#tableau" class="nav-link">Tableau</a></li>
-        <li><a href = "#contact" class="nav-link">Contact</a></li>
-    </ul>
-    <button class="burger-menu" id="burger-menu">
-        <ion-icon class="bars" name="menu-outline"></ion-icon>
-    </button>
-  </nav>
+.tableau img {
+    width: 100%; /* Set a fixed width for the images */
+    max-height: 25rem; /* Set a maximum height to ensure consistency */
+  }
 
-  <section class="hero" id="about" style="background-image: url('images/london_skyline.png'); background-size: cover; background-position: center;">
-    <img 
-        src="images/headshot.png"
-        alt="Marissa Beaty"
-        loading="lazy"
-        class="hero-img"
-    />
-    <div class="bio animate__animated animate__shakeX">
-        <h2 class="bio-title">About Me</h2>
-        <p class="bio-description">
-          I'm Marissa, a recent graduate of the MSc in Data Science and Artificial Intelligence at the University of the Arts London. 
-        </p>
-    </div>
-</section>
+.tableau-card p {
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 
-    <section class="more-about"> 
-          <h2>More About Me</h2>
-          <p>
-            I have a unique blend of backgrounds in data, mathematics, english, and art history, which fuels my passion for blending creative thinking and excellent communication with data analytics, machine learning, and their applications.
+.tableau-title {
+margin-top: 10px; /* Add some spacing between the title and icon */
+}
+-card {
+text-align: center;
+background-color: #fff;
+border-radius: 11px;
+box-shadow: 0 3px 10px var(--primary-shadow);
+padding: 20px;
+margin: 10px;
+}  
 
-            I thrive on unraveling complexity and finding innovative solutions through data science and machine learning, but I also like to make time for the finer things in life and enjoy traveling, baking, and reading in my free-time. If you need any book recommendations or birthday cakes, I'm there! When it comes to data science and AI, I'm eager to embrace the continuous learning in this ever-evolving field and explore the boundless opportunities it has to offer. The possibilities are endless, and I can't wait to see where this data-driven adventure takes me next!
-          </p>
-    </section> 
+.contact {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
 
-  <!-- Skills -->
+.contact h2 {
+    text-align: center;
+    margin-bottom: var(--bottom-margin-2);
+}
 
-    <section class="skills" id="skills">
-      <h2 class="skill-header">My Top Skills</h2>
+.contact-form-container {
+    max-width: 40.75rem;
+    margin: 0 auto;
+    padding: 0.938rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    margin-bottom: 2rem;
+}
 
-    <div class="skills-wrapper">
-      <div class="row">
-        <div class="icon-box">
-            <i class="fab fa-python" style="color: #e63b7a;"></i>
-            <p>Python</p>
-        </div>
-        <div class="icon-box">
-          <img src="icons/tensorflow.png" alt="tensorflow" loading="lazy" class="icon icon-card" style="width: 8rem; height: 8rem;"/>
-          <p>Tensorflow</p>
-        </div>
-        <div class="icon-box">
-            <i class="fa-solid fa-database" style="color: #ffd877;"></i>
-            <p>SQL</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="icon-box">
-            <i class="fa-solid fa-network-wired" style="color: #000;"></i>
-            <p>Machine Learning</p>
-        </div>
-        <div class="icon-box">
-            <i class="fa-regular fa-plus" style="color: #ffd877;"></i>
-            <p>Tableau</p>
-        </div>
-        <div class="icon-box">
-          <i class="fa-solid fa-fire" style="color: #e63b7a;"></i>
-          <p>Pytorch</p>
-      </div>
-    </div>
-    </section>
+.contact-form-container label {
+    line-height: 2.7rem;
+    font-weight: var(--bold-font);
+    color: var(--secondary-color);
+}
 
-    <!-- Projects -->
+.contact-for-container textarea {
+    min-height: 6.25rem;
+    font-size: 14px;
+}
 
-    <section class="projects" id="projects">
-      <h2 class="projects-title">Recent Projects</h2>
-      <div class="project-container">
-          <div class="project-container project-card">
-              <i class="fa-solid fa-earth-europe" style="color: #e63b7a;"></i>
-              <h3 class="project-title">Envisioning Distant Worlds: Fine-Tuning a Latent Diffusion Model with NASA's Exoplanet Data</h3>
-              <p class="project-details">
-                There are some 5,500 confirmed Exoplanets beyond our solar system. Though we know these planets exist, most of them are too far away for us to know what they look like. In this project, I developed an algorithm and a model to translate any given exoplanet’s numeric data into a text prompt that can be input into a trained latent diffusion model to generate a predictive visualization of that exoplanet. This research describes a novel approach of translating numeric data to textual descriptors formulated from prior accepted astrophysical research. These textual descriptions are paired with photographs and artistic visualizations from NASA’s public archives to build a training set for a latent diffusion model, which can produce new visualizations of unseen distant worlds.
-              </p>
-              <a href="https://github.com/mbeaty2/thesis" target="_blank" class="project-link">Check it Out</a>
-          </div>
-          <div class="project-container project-card">
-              <i class="fa-brands fa-spotify" style="color: #ff8647;"></i>
-              <h3 class="project-title">
-                Content Based Generation: Bridging the Gap Between Books and Music with Literary Song Recommendations</h3>
-              <p class="project-details">
-                This project aimed to develop a recommendation system that suggests songs based on the content of a book. By using Spotify's API, four essential song features were adapted to the text: Speechiness, Instrumentalness, Valence, and Energy. Speechiness, representing the wordiness in the text, was determined through the ratio of stop words to total words. Instrumentalness, which proved challenging to define for a book, was calculated by comparing the book's word count to the average word count for various book types. Valence, reflecting the book's sentiment, was assessed using a pre-trained sentiment analysis tool. Energy, a more complex feature, was approximated by comparing word vectors of the book's genres. The results demonstrated the feasibility of linking literature and music and underscored the role of preconceived notions in the interpretation of book-to-song associations, offering room for future refinements and additional features.
-              </p>
-              <a href="https://github.com/mbeaty2/book-to-song-generator" target="_blank" class="project-link">Check it Out</a>
-          </div>
-          <div class="project-container project-card">
-              <i class="fa-solid fa-magnifying-glass-chart" style="color: #ffd877;"></i>
-              <h3 class="project-title">Data Exploration with Regression</h3>
-              <p class="project-details">
-                In this project assignment, the objective was to analyze a dataset containing a list of the Top 100 most streamed songs on Spotify, focusing on three numeric variables: beats per minute (BPS), danceability, and valence. The study aimed to explore the relationships between these variables through various regression models. The project began with an initial data exploration, including examining the data's summary statistics and identifying any potential outliers. Subsequently, the project proceeded to assess the relationships between BPS and danceability, and later incorporated valence to investigate its correlation with both BPS and danceability. A Linear Regression model was employed to predict valence based on BPS and danceability, using data from the dataset.
-              </p>
-              <a href="https://github.com/mbeaty2/understanding-and-manipulating-big-data" target="_blank" class="project-link">Check it Out</a>
-          </div>
-      </div>
-    </section>
+.contact-form-container .input-field {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    border: 2px outset var(--secondary-color);
+    font-size: 0.875rem;
+    outline: none;
+}
 
-  <!-- Tableau -->
+.input-field::placeholder {
+    padding: 0.5rem;
+    color: var(--secondary-color);
+}
 
-    <section class="tableau" id="tableau">
-      <h2 class="projects-title">Data Visualizations with Tableau</h2>
-      <div class="project-container">
-          <div class="project-container project-card">
-              <i class="fa-solid fa-tv" style="color: #ffb43f;"></i>
-              <h3 class="project-title">Exploring Seinfeld Episodes</h3>
-              <p class="project-details">
-              This project utilizes a dataset from Kaggle, accessible at https://www.kaggle.com/datasets/bcruise/seinfeld-episodes?select=seinfeld_episodes.csv, to conduct an in-depth analysis of "Seinfeld" TV series episodes. The analysis encompasses several critical dimensions, including the distribution of episodes per season, viewership statistics for each season in the U.S., and an exploration of the directors' names and the number of shows they were involved in. By delving into these facets, the project provides valuable insights into the show's evolution, popularity over time, and the creative personnel shaping its production. This analysis serves as a valuable resource for fans and researchers interested in gaining a deeper understanding of the iconic "Seinfeld" series and its behind-the-scenes dynamics.
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: var(--bold-font);
+    transition: var(transition);
+}
 
-              This project was inspired by: https://www.youtube.com/watch?v=RHwa5LHANVM  
-              </p>
-              <a href="https://public.tableau.com/views/Seinfelddata/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank" class="project-link">Check it Out</a>
-          </div>
-          <div class="project-container project-card">
-              <i class="fa-solid fa-sack-dollar" style="color: #e63b7a;"></i>
-              <h3 class="project-title">
-                Analyzing Billionaire Data</h3>
-              <p class="project-details">
-                This project relies on a dataset available on Kaggle (accessible via this link: https://www.kaggle.com/datasets/nelgiriyewithana/billionaires-statistics-dataset) to conduct a comprehensive analysis of billionaire statistics. The analysis covers multiple critical dimensions, including final worth by industry, final worth by country, the ratio of self-made billionaires to those who inherited their wealth, gender disparities among billionaires, and the relationship between a billionaire's final worth and the GDP of their country. By examining these aspects, the project aims to provide valuable insights into the distribution of wealth, the factors contributing to billionaires' success, and the economic disparities on a global scale. This analysis has the potential to inform policymakers, economists, and researchers interested in understanding the dynamics of wealth accumulation and its broader implications in the world of billionaires.
-              </p>
-              <a href="https://public.tableau.com/views/billionairedata_16980684935660/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank" class="project-link">Check it Out</a>
-          </div>
-          <div class="project-container project-card">
-            <i class="fa-solid fa-film" style="color: #ffd877;"></i>
-              <h3 class="project-title">An In-Depth Look of Netflix Data</h3>
-              <p class="project-details">
-                This project is a comprehensive exploration of Netflix's movie and TV show content, with a primary focus on understanding the interrelationships between ratings, genres, and the country of origin. The dataset employed for this analysis is accessible through the following link: https://github.com/DataScienceRoadMapDSRM/Tableau-Dashboards-info/blob/main/netflix_titles.csv.
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--secondary-shadow);
+    cursor: pointer;
+}
 
-                The project encompasses various vital components: Ratings Analysis, which scrutinizes how Netflix rates its content; Genres Analysis, examining genre prevalence among their movie options; and Country Analysis, studying the distribution and trends of content from different countries. The dataset serves as a valuable resource, providing insights into Netflix's extensive library of movies and TV shows. This analysis can aid Netflix in optimizing its content offerings, understanding viewer preferences, and making informed decisions regarding content creation and distribution strategies in a dynamic and highly competitive streaming media landscape.
-                
-                This project was based off the following video: https://www.youtube.com/watch?v=BTArwS4ljC4&pp=ygUQdGFibGVhdSBwcm9qZWN0cw%3D%3D&themeRefresh=1
-              </p>
-              <a href="https://public.tableau.com/views/NetflixMovieandTVShowData_16979092214720/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank" class="project-link">Check it Out</a>
-          </div>
-          <div class="project-container project-card">
-            <i class="fa-brands fa-airbnb" style="color: #d357fe;"></i>
-            <h3 class="project-title">AirBnB Price and Location Data</h3>
-            <p class="project-details">
-              This project is a comprehensive analysis of the Airbnb market, encompassing pricing, location, and property size to uncover potential opportunities for market entry. Utilizing a dataset available on Kaggle (accessible at this link: https://www.kaggle.com/datasets/alexanderfreberg/airbnb-listings-2016-dataset), the study examines various facets of the Airbnb ecosystem. Pricing analysis is a key focus, delving into how hosts on Airbnb can determine the rates for their listings, taking into account factors such as location, property type, and number of bedrooms. Location analysis is equally pivotal, as it explores the geographic and neighborhood dynamics that affect demand and pricing. Additionally, the project investigates property size, recognizing its significant impact on traveler preferences. By scrutinizing data related to these three aspects, the project aims to provide insights and valuable information for individuals and businesses looking to enter the Airbnb market. This analysis can inform strategic decisions about property investments, pricing strategies, and market entry approaches, ultimately increasing the chances of success in this dynamic marketplace.
+.socials {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1%;
+    bottom: 100px; /* Adjust this value to position the socials as desired */
+}
 
-              This project was based off the following video: https://www.youtube.com/watch?v=zOR0-nygfDE
-            </p>
-            <a href="https://public.tableau.com/views/AirBnBpriceandlocationinformation/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank" class="project-link">Check it Out</a>
-        </div>
-      </div>
-    </section>
+.socials i {
+    font-size: 2.25rem; /* Adjust the font-size to make the icons bigger */
+  }
 
-  <!-- SQL Examples -->
+.socicon {
+    width: 2rem;
+    height: 2rem;
+}
 
-  <!-- Contact-->
-    <section class="contact" id="contact">
-      <h2>Get In Touch</h2>
-      <div class="contact-form-container">
-        <div class="contact-form">
-          <form action="https://formspree.io/f/xnqkwzbn" method="POST">
-            <div class="form-control">
-              <label for="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="sender-name"
-                placeholder="Enter Your Name"
-                class="input-field"
-                required
-              />
-            </div>
-            <div class="form-control">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="sender-email"
-                placeholder="Enter Your Email"
-                class="input-field"
-                required
-              />
-            </div>
-            <div class="form-control">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                cols="60"
-                rows="10"
-                placeholder="Enter Your Message"
-                name="message"
-                class="input-field"
-                required
-              ></textarea>
-            </div>
-            <input
-              type="submit"
-              value="Submit"
-              id="submit-btn"
-              class="submit-btn"
-            />
-          </form>
-        </div>
-      </div>
-    </section>
+.scroll-up {
+    position: fixed;
+    right: 1%;
+    top: 90%;
+    cursor: pointer;
+}
 
-    <div class="socials">
-      <a href="https://www.instagram.com/marissa_beaty/" target="_blank">
-        <i class="fab fa-instagram" style="color: #e63b7a;"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/marissa-beaty-983280160/" target="_blank">
-        <i class="fa-brands fa-linkedin" style="color: #ffd877;"></i>
-      </a>
-      <a href="https://github.com/mbeaty2" target="_blank">
-        <i class="fa-brands fa-github" style="color: #ff8647;"></i>
-      </a>
-    </div>
-    
-    <!-- Scroll to top -->
-    <i class="fa-solid fa-circle-up scroll-up" id="scroll-up" style="color: #9929bd;"></i>
+.scroll-up i {
+    font-size: 2.25rem;
+}
 
-    
-    <footer>
-      <p class="copy">&copy; Copyright 2023</p>
-      <p class="copy">
-        Built with &#x2661; by Marissa Beaty
-      </p>
-    </footer>
-    
-    <!-- Website scripts 
-    <script src="assets/js/app.js"></script> -->
+:root { scroll-behavior: smooth; }
 
-    <!-- icon scripts --> 
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+.scroll-up:hover {
+    opacity: 0.8;
+}
+.scroll-up:focus {
+    opacity: 0.9;
+}
+.scroll-up:active {
+    opacity: 1;
+}
 
-    </body> 
-</html>
+footer {
+    background-color: var(--bg-color);
+    padding: 1.25rem;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
