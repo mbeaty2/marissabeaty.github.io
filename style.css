@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* Variables */
+:root {
+    --font-family: "Roboto", sans-serif;
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --bg-color: #FFFFFF;
+    --primary-color: #D62246;
+    --secondary-color: #119DA4;
+    --primary-shadow: #A62639;
+    --secondary-shadow: #210124;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+}
+/* Variables end */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration:none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 5pc rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+    color: var(--primary-color);
+}
+
+nav a {
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul {
+    display: flex;
+    gap: 1.9rem;
+}
+
+nav ul li {
+    font-weight: var(--bold-font);
+}
+
+.burger-menu {
+    color: var(--primary-color);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 68.75rem;
+    margin: auto;
+}
+
+.hero img {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    padding: 1.0rem;
+}
+
+.bio {
+    width: 25rem;
+    padding: 0.625rem;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+}
+
+.bio h1 {
+    margin-bottom: var(--bottom-margin);
+}
+
+.bio p {
+    line-height: var(--line-height);
+    padding:0.3rem 0;
+}
+
+.more-about {
+    background-color: var(--background-color);
+    padding: 3rem 3rem;
+}
+
+.more-about h2 {
+    margin-bottom: var(--bottom-margin);
+    text-align: center;
+}
+
+.more-about p {
+    line-height: var(--line-height);
+    padding: 0.4rem;
+}
+
+.skills {
+    max-width: 68.75rem;
+    margin: auto;
+    text-align: center;
+    background-color: lavenderblush;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-header {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, fr);
+    gap: 5px; /* Adjust the gap between the rows */
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    gap: 5px; /* Adjust the gap between the icons in each row */
+}
+
+.icon-box {
+    width: 12rem; /* Adjust the width to your preference */
+    height: 12rem; /* Adjust the height to your preference */
+    background-color: #fff; /* Background color for the box */
+    border-radius: 11px; /* Add rounded corners */
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    text-align: center; /* Center the content horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    align-items: center;
+    margin: 10px; /* Adjust the margin between boxes */
+}
+
+.icon-box i,
+.icon-box img {
+    font-size: 8rem; 
+    color: #e63b7a; 
+}
+
+.icon-box p {
+    margin: 0.75rem;
+}
+
+.projects {
+    background-color: var(--bg-color);
+    padding: 32px;
+    margin-top: 2rem;
+}
+
+.projects h2 {
+    text-align: center;
+}
+
+.project-pic {
+    width: 65%;
+    height: 60%;
+}
+
+.project-container {
+    display: flex;
+    grid-template-columns: repeat(3, fr); /* Three columns with equal width */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.project-container p {
+    padding: 0.4rem;
+}
+
+.project-title {
+    margin-bottom: var(--bottom-margin);
+}
+
+.project-details {
+    margin-bottom: var(--bottom-margin);
+}
+
+.project-card {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 20px;
+    margin: 10px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+.project-card i {
+    font-size: 5rem; 
+    padding-bottom: 1rem;
+}
+  
+.tableau {
+background-color: var(--bg-color);
+justify-content: center;
+align-items: center;
+background-color: lavender;
+padding: 1rem;
+}
+
+.tableau h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.tableau-container {
+display: grid;
+grid-template-columns: repeat(2, 1fr); 
+gap: 10px; 
+justify-content: center;
+align-content: center; 
+}
+
+.tableau-card {
+text-align: center;
+background-color: #fff;
+border-radius: 11px;
+box-shadow: 0 3px 10px var(--secondary-shadow);
+padding: 20px;
+margin: 10px;
+}
+
+.tableau img {
+    width: 100%; /* Set a fixed width for the images */
+    max-height: 25rem; /* Set a maximum height to ensure consistency */
+  }
+
+.tableau-card p {
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tableau-title {
+margin-top: 10px; /* Add some spacing between the title and icon */
+}
+-card {
+text-align: center;
+background-color: #fff;
+border-radius: 11px;
+box-shadow: 0 3px 10px var(--primary-shadow);
+padding: 20px;
+margin: 10px;
+}  
+
+.contact {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: var(--bottom-margin-2);
+}
+
+.contact-form-container {
+    max-width: 40.75rem;
+    margin: 0 auto;
+    padding: 0.938rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    margin-bottom: 2rem;
+}
+
+.contact-form-container label {
+    line-height: 2.7rem;
+    font-weight: var(--bold-font);
+    color: var(--secondary-color);
+}
+
+.contact-for-container textarea {
+    min-height: 6.25rem;
+    font-size: 14px;
+}
+
+.contact-form-container .input-field {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    border: 2px outset var(--secondary-color);
+    font-size: 0.875rem;
+    outline: none;
+}
+
+.input-field::placeholder {
+    padding: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: var(--bold-font);
+    transition: var(transition);
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--secondary-shadow);
+    cursor: pointer;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1%;
+    bottom: 100px; /* Adjust this value to position the socials as desired */
+}
+
+.socials i {
+    font-size: 2.25rem; /* Adjust the font-size to make the icons bigger */
+  }
+
+.socicon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.scroll-up {
+    position: fixed;
+    right: 1%;
+    top: 90%;
+    cursor: pointer;
+}
+
+.scroll-up i {
+    font-size: 2.25rem;
+}
+
+:root { scroll-behavior: smooth; }
+
+.scroll-up:hover {
+    opacity: 0.8;
+}
+.scroll-up:focus {
+    opacity: 0.9;
+}
+.scroll-up:active {
+    opacity: 1;
+}
+
+footer {
+    background-color: var(--bg-color);
+    padding: 1.25rem;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
