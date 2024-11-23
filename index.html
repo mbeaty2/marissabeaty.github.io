@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marissa Beaty | Data Scientist & Machine Learning Engineer</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!--Favicons-->
+  <link
+  rel="icon name"
+  sizes="180x180"
+  href="icon location"
+  />
+
+  <script src="https://kit.fontawesome.com/b36c785be0.js" crossorigin="anonymous"></script>
+
+  <!--Animate CSS CDN-->
+  <link rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+</head>
+<body class="home">
+
+    <div id="header"></div>
+
+  <!-- Main Content-->
+  <main>
+    <div class="transparent-box">
+      <h2 class="typewriter-title"></h2>
+      <p class="typewriter-text"></p>
+    </div>
+  </main>
+
+  <script>
+    // Title typing effect
+    const title = document.querySelector('.typewriter-title');
+    const titleText = "Welcome to my Website";
+  
+    function textTypingEffect(element, text, i = 0, callback = null) {
+      // Append the next character to the textContent of the element
+      element.textContent = text.substring(0, i);
+  
+      // Stop typing when the full text is typed
+      if (i >= text.length) {
+        if (callback) callback(); // Call the callback function if provided
+        return;
+      }
+  
+      // Call the function recursively with a small timeout
+      setTimeout(() => textTypingEffect(element, text, i + 1, callback), 60); 
+    }
+  
+    // Body text typing effect
+    const div = document.querySelector('.typewriter-text');
+    const bodyText = "Hello! My name is Marissa Beaty. I'm a researcher, data scientist, and machine learning engineer. Take a look around and reach out if you have any questions!";
+  
+    function startBodyTextTyping() {
+      textTypingEffect(div, bodyText); // Start typing the body text after the title finishes
+    }
+  
+    // Start typing effect for the title, then call startBodyTextTyping after the title is done
+    textTypingEffect(title, titleText, 0, startBodyTextTyping);
+  </script>
+
+  <!-- Footer -->
+  <footer>
+    <div class="socials">
+        <a href="https://www.instagram.com/marissa_beaty/" target="_blank">
+          <i class="fab fa-instagram" style="color: #F2F5EA;"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/marissa-beaty-983280160/" target="_blank">
+          <i class="fa-brands fa-linkedin" style="color: #F2F5EA;"></i>
+        </a>
+        <a href="https://github.com/mbeaty2" target="_blank">
+          <i class="fa-brands fa-github" style="color: #F2F5EA;"></i>
+        </a>
+      </div>
+  </footer>
+
+  <!-- JavaScript to load the header dynamically -->
+  <script>
+    fetch('javascript/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading header:', error));
+  </script>
+</body>
+</html>
