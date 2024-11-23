@@ -1,0 +1,116 @@
+<!--header-->
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About</title>
+  
+  <link rel="stylesheet" href="../css/styles.css" />
+
+    <!--Favicons-->
+    <link
+    rel="icon name"
+    sizes="180x180"
+    href="icon location"
+    />
+  
+    <script src="https://kit.fontawesome.com/b36c785be0.js" crossorigin="anonymous"></script>
+  
+    <!--Animate CSS CDN-->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body class=about>
+
+<div id="header"></div>
+
+ <!--main content-->
+ <main class="about-main">
+    <section class="sections-box">
+
+        <!-- Quote section at the top -->
+        <section id="quote">
+            <div class="quote-box">
+                <p>"There’s as many atoms in a single molecule of your DNA as there are stars in the typical galaxy. We are, each of us, a little universe." – Neil DeGrasse Tyson</p>
+            </div>
+        </section>
+
+        <!-- About section below the quote -->
+        <section id="about">
+            <h2>About</h2>
+            <p>
+                Hi, I'm Marissa Beaty! I’m a data scientist and machine learning engineer with a passion for leveraging data to tell stories, solve problems, and innovate. I hold a Master’s degree in Data Science and AI and specialize in machine learning, data visualization, and predictive analytics.
+            </p>
+            <p>
+                My journey in data science began with my fascination for patterns and analytics, which led me to dive deep into data-driven insights. I enjoy working on projects that intersect creativity and technical expertise—whether it’s a machine learning model, an interactive dashboard, or a new data analysis framework.
+            </p>
+            <p>
+                I am particularly passionate about astrophysics and the capabilities of data science and machine learning in expanding our understanding of the universe. When I’m not immersed in data, I love exploring, writing, hiking, and expanding my knowledge in new areas of technology and design.
+            </p>
+        </section>
+
+        <!-- Container for Skills and Technology side by side -->
+        <section id="skills-technology" class="flex-container">
+            <div id="skills">
+                <h3>Skills</h3>
+                <ul class="skills-list">
+                    <li>Machine Learning</li>
+                    <li>Data Visualization</li>
+                    <li>Statistical Analysis</li>
+                    <li>Project Management</li>
+                    <li>Cloud Computing</li>
+                </ul>
+            </div>
+            
+            <div id="technology">
+                <h3>Familiar Technology</h3>
+                <ul class="skills-list">
+                    <li>Pytorch</li>
+                    <li>Tensorflow</li>
+                    <li>Javascript, HTML, CSS</li>
+                    <li>Python, R, SQL</li>
+                    <li>Tableau, Power BI</li>
+                </ul>
+            </div>
+        </section>
+        
+    </section>
+</main>
+
+
+
+<!--footer-->
+<footer>
+    <div class="socials">
+        <a href="https://www.instagram.com/marissa_beaty/" target="_blank">
+          <i class="fab fa-instagram" style="color: #F2F5EA;"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/marissa-beaty-983280160/" target="_blank">
+          <i class="fa-brands fa-linkedin" style="color: #F2F5EA;"></i>
+        </a>
+        <a href="https://github.com/mbeaty2" target="_blank">
+          <i class="fa-brands fa-github" style="color: #F2F5EA;"></i>
+        </a>
+      </div>
+  </footer>
+
+  <script>
+    // Fetch and inject the header
+    fetch('../javascript/header.html')  
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('header').innerHTML = data;  // Inject the header
+  
+          // Dynamically load the CSS after the header is injected
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = '../css/style.css';  // Adjust the path to your CSS file
+          document.head.appendChild(link);  // Add the link tag to the <head>
+      })
+      .catch(error => console.error('Error loading header:', error));
+  </script>
+
+</body>
+</html>

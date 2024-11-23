@@ -1,0 +1,164 @@
+<!--header-->
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Marissa Beaty</title>
+  
+  <link rel="stylesheet" href="../css/styles.css" />
+
+    <!--Favicons-->
+    <link
+    rel="icon name"
+    sizes="180x180"
+    href="icon location"
+    />
+  
+    <script src="https://kit.fontawesome.com/b36c785be0.js" crossorigin="anonymous"></script>
+  
+    <!--Animate CSS CDN-->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body class="contact">
+
+  <div id="header"></div>
+
+<!-- Main Content -->
+<main class="contact-main">
+    <!-- Container to hold heading and form together -->
+    <div class="contact-container">
+        <h1 class="contact-heading">Hello!</h1>
+
+        <p>
+            Hi! I'm thrilled you're reaching out. I'm passionate about all things data and design, but I’m also a big fan of books and baking. Whatever you want to chat about, I’d love to hear from you!
+        </p>
+        <p>
+            Simply fill out the form below, and I’ll get back to you as soon as possible.
+        </p>
+        
+        <div class="contact-form-div">
+        <h3 class="form-header">Get in Touch</h3>
+        <!-- Contact Section containing the form -->
+        <section class="contact" id="contact">
+            <div class="contact-form-container">
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/xnqkwzbn" method="POST">
+                        <!-- Name Field -->
+                        <div class="form-control">
+                            <label for="name"></label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="sender-name"
+                                placeholder="Enter Your Name"
+                                class="input-field"
+                                required
+                            />
+                        </div>
+                        
+                        <!-- Email Field -->
+                        <div class="form-control">
+                            <label for="email"></label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="sender-email"
+                                placeholder="Enter Your Email"
+                                class="input-field"
+                                required
+                            />
+                        </div>
+                        
+                        <!-- Message Field -->
+                        <div class="form-control">
+                            <label for="message"></label>
+                            <textarea
+                                id="message"
+                                cols="60"
+                                rows="10"
+                                placeholder="Enter Your Message"
+                                name="message"
+                                class="input-field"
+                                required
+                            ></textarea>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <input
+                            type="submit"
+                            value="Submit"
+                            id="submit-btn"
+                            class="submit-btn"
+                        />
+                    </form>
+                </div>
+            </div>
+        </section>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="socials">
+        <a href="https://www.instagram.com/marissa_beaty/" target="_blank">
+          <i class="fab fa-instagram" style="color: #F2F5EA;"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/marissa-beaty-983280160/" target="_blank">
+          <i class="fa-brands fa-linkedin" style="color: #F2F5EA;"></i>
+        </a>
+        <a href="https://github.com/mbeaty2" target="_blank">
+          <i class="fa-brands fa-github" style="color: #F2F5EA;"></i>
+        </a>
+      </div>
+</footer>
+
+<script>
+    // Load the header.html file into the #header div
+    fetch('../javascript/header.html')
+      .then(response => response.text())
+      .then(html => {
+        // Insert the header HTML into the page
+        document.getElementById('header').innerHTML = html;
+  
+        // Add a style tag to change font color of specific header elements
+        const style = document.createElement('style');
+        style.textContent = `
+          #header .site-name, #header .navbar a {
+            color: #552D32; /* Example color */
+          }
+        `;
+        document.head.appendChild(style);
+      })
+      .catch(error => {
+        console.error('Error loading header:', error);
+      });
+  </script>
+
+<script class="contact-star">
+    window.addEventListener('mousemove', function(e) {
+        var arr = [1, 0.9, 0.9, 0.5, 0.2];
+
+        arr.forEach(function(i) {
+            var x = (1 - i) * 25;
+            var star = document.createElement('div');
+
+            star.className = 'star';
+            star.style.top = e.pageY + Math.round(Math.random() * x - x / 2) + 'px';
+            star.style.left = e.pageX + Math.round(Math.random() * x - x / 2) + 'px';
+
+            document.body.appendChild(star);
+
+            window.setTimeout(function() {
+                document.body.removeChild(star);
+            }, Math.round(Math.random() * i * 600));
+        });
+    }, false);
+</script>
+
+</body>
+</html>
+
