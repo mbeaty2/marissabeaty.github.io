@@ -9,3 +9,6 @@ Here is my personal website hosted through github. This website was originally c
 This template was adapted from this great simple HTML project website template https://github.com/yenchiah/project-website-template, originally created by: http://yenchiah.me/
 
 Following the completion of this degree, this website was completely revamped using HTML and CSS to translate it from the template provided above, to a unique and self-designed website showcasing my professional accomplishments and personal style. 
+
+And again, a year out of my degree with far more experience and knowledge, I redid the website again to show my progression in my professional career. What is available on Marissabeaty.me reflects the most recent changes made. 
+
