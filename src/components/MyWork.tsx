@@ -27,7 +27,7 @@ const MyWork: React.FC<MyWorkProps> = ({ className }) => {
   ];
 
   return (
-    <section id="my-work" className={cn("py-20 bg-[url('src/bw-main-image.jpeg')] bg-cover bg-center bg-no-repeat", className)}>
+    <section id="my-work" className={cn("py-20 bg-[url('/public/images/bw-main-image.jpeg')] bg-cover bg-center bg-no-repeat", className)}>
       <div className="w-full max-w-6xl mx-auto bg-gray-50/80 shadow-lg p-6 sm:p-10">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto mb-16">
