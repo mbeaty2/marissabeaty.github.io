@@ -52,7 +52,12 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
           to="/" 
           className="text-xl font-serif font-medium tracking-tight text-orangery-10 transition-opacity hover:opacity-80"
         >
-          Marissa A.Beaty
+          <img
+            src="/mb_logo_cream.png" 
+            alt="Marissa A. Beaty logo"
+            className="h-8 w-auto"
+          />
+          {/* Marissa A.Beaty */}
         </NavLink>
         
         <div className="hidden md:flex items-center space-x-8">
