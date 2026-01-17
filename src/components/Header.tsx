@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
           className="text-xl font-serif font-medium tracking-tight text-orangery-10 transition-opacity hover:opacity-80"
         >
           <img
-            src="/mb_logo_cream.png" 
+            src="images/mb_logo_cream.png" 
             alt="Marissa A. Beaty logo"
             className="h-8 w-auto"
           />
