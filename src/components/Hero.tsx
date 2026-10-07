@@ -27,28 +27,23 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
     >
       <div className="flex flex-col gap-7">
         <FadeIn>
-          <p className="flex flex-wrap items-baseline gap-3">
-            <span className="font-serif italic text-2xl md:text-3xl text-ink">
-              Marissa Beaty
-            </span>
-            <span className="font-mono text-xs uppercase tracking-[0.08em] text-slateline">
-              London
-            </span>
+          <p className="font-serif italic text-2xl md:text-3xl text-ink">
+            I'm Marissa.
           </p>
         </FadeIn>
 
         <FadeIn delay={80}>
           <h1 className="font-serif font-light leading-[1.05] tracking-[-0.02em] text-[clamp(48px,7.2vw,104px)] max-w-[16ch] text-ink">
-            Making <em className="italic text-cobalt">data</em> legible, and a
-            little more <em className="italic text-cobalt">human</em>.
+            Bringing a little <em className="italic text-cobalt">humanity</em>{' '}
+            to <em className="italic text-cobalt">AI</em>.
           </h1>
         </FadeIn>
 
         <FadeIn delay={160}>
           <p className="font-serif text-[clamp(17px,1.6vw,20px)] leading-[1.6] max-w-[62ch] text-ink">
-            I'm a researcher and product consultant working where data, design
-            and storytelling meet. I build tools that make complexity easier
-            to hold, and I write to find out what the data actually means.
+            I work with data and AI — as a product consultant and researcher
+            who builds tools that make complexity feel human, and writes to
+            find out what it actually means.
           </p>
         </FadeIn>
 
