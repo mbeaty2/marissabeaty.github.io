@@ -27,8 +27,13 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
     >
       <div className="flex flex-col gap-7">
         <FadeIn>
-          <p className="font-mono text-xs uppercase tracking-[0.08em] text-slateline">
-            Marissa Beaty — London
+          <p className="flex flex-wrap items-baseline gap-3">
+            <span className="font-serif italic text-2xl md:text-3xl text-ink">
+              Marissa Beaty
+            </span>
+            <span className="font-mono text-xs uppercase tracking-[0.08em] text-slateline">
+              London
+            </span>
           </p>
         </FadeIn>
 
