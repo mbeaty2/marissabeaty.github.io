@@ -215,6 +215,12 @@ html.dark ::-webkit-scrollbar-thumb {
   scroll-margin-top: 110px;
 }
 
+@media (prefers-color-scheme: dark) {
+  .site-logo img {
+    filter: invert(1);
+  }
+}
+
 .fn-page::before {
   content: "";
   position: fixed;

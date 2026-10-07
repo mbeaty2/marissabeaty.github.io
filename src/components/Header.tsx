@@ -21,16 +21,20 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
   return (
     <header
       className={cn(
-        'relative z-10 flex flex-wrap items-baseline justify-between gap-6 border-b border-ink py-6 md:py-7',
+        'relative z-10 flex flex-wrap items-center justify-between gap-6 border-b border-ink py-4 md:py-5',
         className
       )}
     >
       <a
         href="#top"
         onClick={scrollToSection('top')}
-        className="font-serif italic text-xl text-ink no-underline"
+        className="site-logo shrink-0"
       >
-        Marissa
+        <img
+          src="/images/logo-mark.png"
+          alt="Marissa Beaty"
+          className="h-10 md:h-12 w-auto"
+        />
       </a>
 
       <nav aria-label="Primary" className="flex flex-wrap gap-7">
