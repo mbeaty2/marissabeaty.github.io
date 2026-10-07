@@ -17,8 +17,10 @@ const Index = () => {
         Skip to content
       </a>
 
-      <div className="relative z-[1] max-w-[1280px] mx-auto px-5 md:px-12">
-        <Header />
+      <div className="sticky top-0 z-20 bg-paper">
+        <div className="max-w-[1280px] mx-auto px-5 md:px-12">
+          <Header />
+        </div>
       </div>
 
       <main id="main" className="relative z-[1] max-w-[1280px] mx-auto px-5 md:px-12">

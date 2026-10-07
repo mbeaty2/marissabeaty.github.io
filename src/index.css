@@ -211,6 +211,10 @@ html.dark ::-webkit-scrollbar-thumb {
   color: var(--ink);
 }
 
+.fn-page [id] {
+  scroll-margin-top: 110px;
+}
+
 .fn-page::before {
   content: "";
   position: fixed;

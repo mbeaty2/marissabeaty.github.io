@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
+import { cn, scrollToId } from '@/lib/utils';
 
 interface HeaderProps {
   className?: string;
@@ -15,14 +15,7 @@ const NAV_LINKS: { id: string; label: string }[] = [
 const Header: React.FC<HeaderProps> = ({ className }) => {
   const scrollToSection = (id: string) => (e: React.MouseEvent) => {
     e.preventDefault();
-    if (id === 'top') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      return;
-    }
-    const element = document.getElementById(id);
-    if (element) {
-      window.scrollTo({ top: element.offsetTop - 24, behavior: 'smooth' });
-    }
+    scrollToId(id);
   };
 
   return (

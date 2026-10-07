@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
+import { cn, scrollToId } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
 import ConstructionDiagram from './ConstructionDiagram';
 
@@ -17,10 +17,7 @@ const DETAILS: { term: string; detail: string }[] = [
 const Hero: React.FC<HeroProps> = ({ className }) => {
   const scrollTo = (id: string) => (e: React.MouseEvent) => {
     e.preventDefault();
-    const element = document.getElementById(id);
-    if (element) {
-      window.scrollTo({ top: element.offsetTop - 24, behavior: 'smooth' });
-    }
+    scrollToId(id);
   };
 
   return (
