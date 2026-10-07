@@ -1,38 +1,99 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
+import ConstructionDiagram from './ConstructionDiagram';
 
 interface HeroProps {
   className?: string;
 }
 
+const DETAILS: { term: string; detail: string }[] = [
+  { term: 'Based', detail: 'London' },
+  { term: 'Now', detail: 'Lecturer, UAL Creative Computing Institute' },
+  { term: 'Also', detail: 'Product Consultant, Colibri Digital' },
+  { term: 'Open to', detail: 'Research and creative roles focused on data' },
+];
+
 const Hero: React.FC<HeroProps> = ({ className }) => {
+  const scrollTo = (id: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({ top: element.offsetTop - 24, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className={cn('relative min-h-screen flex items-center overflow-hidden', className)}>
-      <div className="absolute inset-0 -z-10">
-        <img 
-          src="/images/main-image-b.png" 
-         // alt="Pines Along the Shore by Henri-Edmund Cross" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/30"></div>
+    <section
+      id="top"
+      className={cn('grid grid-cols-1 md:grid-cols-[1.6fr_1fr] gap-12 py-16 md:py-24', className)}
+    >
+      <div className="flex flex-col gap-7">
+        <FadeIn>
+          <p className="font-mono text-xs uppercase tracking-[0.08em] text-slateline">
+            Marissa Beaty — London
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={80}>
+          <h1 className="font-serif font-light leading-[1.05] tracking-[-0.02em] text-[clamp(48px,7.2vw,104px)] max-w-[16ch] text-ink">
+            Making <em className="italic text-cobalt">data</em> legible, and a
+            little more <em className="italic text-cobalt">human</em>.
+          </h1>
+        </FadeIn>
+
+        <FadeIn delay={160}>
+          <p className="font-serif text-[clamp(17px,1.6vw,20px)] leading-[1.6] max-w-[62ch] text-ink">
+            I'm a researcher and product consultant working where data, design
+            and storytelling meet. I build tools that make complexity easier
+            to hold, and I write to find out what the data actually means.
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={220}>
+          <div className="flex flex-wrap gap-8">
+            <a
+              href="#work"
+              onClick={scrollTo('work')}
+              className="inline-flex items-center gap-2 font-mono text-[13px] uppercase tracking-[0.08em] text-ink no-underline border-b border-spark pb-0.5 transition-colors hover:text-cobalt"
+            >
+              View the index
+            </a>
+            <a
+              href="#contact"
+              onClick={scrollTo('contact')}
+              className="inline-flex items-center gap-2 font-mono text-[13px] uppercase tracking-[0.08em] text-ink no-underline border-b border-ink pb-0.5 transition-colors hover:text-cobalt hover:border-cobalt"
+            >
+              Say hello
+            </a>
+          </div>
+        </FadeIn>
+
+        <FadeIn delay={280}>
+          <ConstructionDiagram className="mt-2" />
+        </FadeIn>
       </div>
-      
-      <div className="container mx-auto px-4 md:px-6 py-20 md:py-32 relative z-10 max-w-4xl">
-        <div className="max-w-3xl mx-auto text-center">
-          <FadeIn delay={200}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium tracking-tight text-white leading-tight mb-6">
-              Marissa A. Beaty
-            </h1>
-          </FadeIn>
-          
-          <FadeIn delay={300}>
-            <p className="text-lg md:text-xl text-white/90 mb-4">
-            Tools that think. Stories that feel.
-            </p>
-          </FadeIn>
-        </div>
-      </div>
+
+      <FadeIn delay={200} className="pt-2">
+        <dl className="flex flex-col gap-3.5 border-t border-ink pt-4">
+          {DETAILS.map((item, i) => (
+            <div
+              key={item.term}
+              className={cn(
+                'pb-3.5',
+                i !== DETAILS.length - 1 && 'border-b border-ink'
+              )}
+            >
+              <dt className="font-mono text-[11px] uppercase tracking-[0.08em] text-slateline">
+                {item.term}
+              </dt>
+              <dd className="mt-1 font-serif text-[17px] text-ink">
+                {item.detail}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </FadeIn>
     </section>
   );
 };

@@ -21,9 +21,19 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['SF Pro Display', 'Inter', 'system-ui', 'sans-serif'],
-				serif: ['GT Sectra', 'Georgia', 'serif'],
+				serif: ['Fraunces', 'Georgia', 'serif'],
+				mono: ['"IBM Plex Mono"', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace'],
 			},
 			colors: {
+				paper: 'var(--paper)',
+				surface2: 'var(--surface)',
+				ink: 'var(--ink)',
+				cobalt: 'var(--accent-color)',
+				periwinkle: 'var(--accent-soft)',
+				slateline: 'var(--slate)',
+				sage: 'var(--sage)',
+				mist: 'var(--mist)',
+				spark: 'var(--spark)',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

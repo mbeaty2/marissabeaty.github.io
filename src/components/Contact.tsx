@@ -1,9 +1,6 @@
-
 import React from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
-import Button from './ui-custom/Button';
 
 interface ContactProps {
   className?: string;
@@ -11,105 +8,94 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = ({ className }) => {
   return (
-    <section id="contact" className={cn('py-20 md:py-32 bg-gray-50', className)}>
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-20">
-          <FadeIn>
-            <div className="space-y-8">
-              <div>
-                <span className="text-sm md:text-base font-medium text-blue-600 mb-2 inline-block">Get in touch</span>
-                <h2 className="text-3xl md:text-5xl font-serif font-medium tracking-tight mb-6">Let's work together</h2>
-                <p className="text-lg text-muted-foreground">
-                  I'm always interested in new opportunities and collaborations. Feel free to reach out if you'd like to discuss a project or just say hello.
-                </p>
-              </div>
+    <section id="contact" className={cn('py-20 border-t border-ink', className)}>
+      <FadeIn>
+        <h2 className="font-serif font-light leading-[1.05] tracking-[-0.02em] text-[clamp(40px,6vw,88px)] max-w-[18ch] text-ink">
+          Let's talk about <em className="italic text-cobalt">data</em>, or
+          something else entirely.
+        </h2>
+      </FadeIn>
 
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Mail className="text-blue-600" size={20} />
-                  <span className="text-gray-700">hello@example.com</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="text-blue-600" size={20} />
-                  <span className="text-gray-700">+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="text-blue-600" size={20} />
-                  <span className="text-gray-700">San Francisco, CA</span>
-                </div>
-              </div>
+      <FadeIn delay={100}>
+        <a
+          href="mailto:[email@placeholder]"
+          className="inline-block mt-9 font-mono text-[clamp(18px,2.4vw,26px)] text-ink no-underline border-b-2 border-spark pb-1 transition-colors hover:text-cobalt"
+        >
+          [email@placeholder]
+        </a>
+      </FadeIn>
 
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  <Github size={24} />
-                </a>
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  <Linkedin size={24} />
-                </a>
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  <Twitter size={24} />
-                </a>
-              </div>
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={150}>
-            <form className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Your name"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="your.email@example.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Project inquiry"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                  placeholder="Tell me about your project..."
-                />
-              </div>
-
-              <Button type="submit" variant="primary" size="lg" fullWidth>
-                Send Message
-              </Button>
-            </form>
-          </FadeIn>
+      <FadeIn delay={160}>
+        <div className="flex flex-wrap gap-7 mt-10">
+          <a href="[CV link]" className="font-mono text-[13px] uppercase tracking-[0.08em] text-ink no-underline border-b border-ink pb-0.5 transition-colors hover:text-cobalt hover:border-cobalt">
+            CV
+          </a>
+          <a href="[LinkedIn link]" className="font-mono text-[13px] uppercase tracking-[0.08em] text-ink no-underline border-b border-ink pb-0.5 transition-colors hover:text-cobalt hover:border-cobalt">
+            LinkedIn
+          </a>
+          <a href="[Substack link]" className="font-mono text-[13px] uppercase tracking-[0.08em] text-ink no-underline border-b border-ink pb-0.5 transition-colors hover:text-cobalt hover:border-cobalt">
+            The Root of It All
+          </a>
         </div>
-      </div>
+      </FadeIn>
+
+      <FadeIn delay={220}>
+        <form
+          action="https://formspree.io/f/xnqkwzbn"
+          method="POST"
+          className="flex flex-col gap-6 mt-16 max-w-xl"
+        >
+          <p className="font-mono text-xs uppercase tracking-[0.08em] text-slateline">
+            Or write directly
+          </p>
+
+          <div>
+            <label htmlFor="contact-name" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-slateline mb-1.5">
+              Name
+            </label>
+            <input
+              type="text"
+              id="contact-name"
+              name="sender-name"
+              required
+              className="w-full bg-transparent border-0 border-b border-ink py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-cobalt"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="contact-email" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-slateline mb-1.5">
+              Email
+            </label>
+            <input
+              type="email"
+              id="contact-email"
+              name="sender-email"
+              required
+              className="w-full bg-transparent border-0 border-b border-ink py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-cobalt"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="contact-message" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-slateline mb-1.5">
+              Message
+            </label>
+            <textarea
+              id="contact-message"
+              name="message"
+              rows={5}
+              required
+              className="w-full bg-transparent border-0 border-b border-ink py-2 font-serif text-[17px] text-ink resize-none focus:outline-none focus-visible:border-cobalt"
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="self-start mt-2 font-mono text-[13px] uppercase tracking-[0.08em] text-ink border-b border-spark pb-0.5 transition-colors hover:text-cobalt"
+          >
+            Submit
+          </button>
+        </form>
+      </FadeIn>
     </section>
   );
 };

@@ -1,53 +1,39 @@
-
-import React, { useEffect } from 'react';
+import React from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-
-import Manifesto from '@/components/Manifesto';
-import MyWork from '@/components/MyWork';
-import Community from '@/components/Community';
-import About from '@/components/About';
+import WorkIndex from '@/components/WorkIndex';
+import Plates from '@/components/Plates';
+import NotesOnMethod from '@/components/NotesOnMethod';
+import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 const Index = () => {
-  useEffect(() => {
-    // Smooth scroll behavior for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href')?.substring(1);
-        if (!targetId) return;
-        
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 80, // Account for header height
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-    
-    return () => {
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.removeEventListener('click', function (e) {
-          // Cleanup
-        });
-      });
-    };
-  }, []);
-  
   return (
-    <main className="relative">
-      <Header />
-      <Hero />
-      <Manifesto />
-      <About />
-      <MyWork />
-      <Community />
-      <Footer />
-    </main>
+    <div className="fn-page min-h-screen">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-cobalt focus:text-paper focus:px-4 focus:py-2 focus:font-mono focus:text-[13px]"
+      >
+        Skip to content
+      </a>
+
+      <div className="relative z-[1] max-w-[1280px] mx-auto px-5 md:px-12">
+        <Header />
+      </div>
+
+      <main id="main" className="relative z-[1] max-w-[1280px] mx-auto px-5 md:px-12">
+        <Hero />
+        <WorkIndex />
+        <Plates />
+      </main>
+
+      <NotesOnMethod className="relative z-[1]" />
+
+      <div className="relative z-[1] max-w-[1280px] mx-auto px-5 md:px-12">
+        <Contact />
+        <Footer />
+      </div>
+    </div>
   );
 };
 
