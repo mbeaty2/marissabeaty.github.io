@@ -7,7 +7,7 @@ interface HeaderProps {
 
 const NAV_LINKS: { id: string; label: string }[] = [
   { id: 'work', label: 'Work' },
-  { id: 'plates', label: 'Plates' },
+  { id: 'figures', label: 'Figures' },
   { id: 'method', label: 'About' },
   { id: 'contact', label: 'Contact' },
 ];
