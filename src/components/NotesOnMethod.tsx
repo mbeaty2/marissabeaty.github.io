@@ -60,7 +60,7 @@ const NotesOnMethod: React.FC<NotesOnMethodProps> = ({ className }) => {
         <div className="flex flex-wrap items-baseline justify-between gap-6 mb-10">
           <FadeIn>
             <p className="font-mono text-xs uppercase tracking-[0.08em] text-periwinkle">
-              03 / About
+              02 / About
             </p>
           </FadeIn>
           <FadeIn delay={60}>

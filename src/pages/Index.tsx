@@ -1,8 +1,7 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import WorkIndex from '@/components/WorkIndex';
-import Figures from '@/components/Figures';
+import Collection from '@/components/Collection';
 import NotesOnMethod from '@/components/NotesOnMethod';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -25,8 +24,7 @@ const Index = () => {
 
       <main id="main" className="relative z-[1] max-w-[1280px] mx-auto px-5 md:px-12">
         <Hero />
-        <WorkIndex />
-        <Figures />
+        <Collection />
       </main>
 
       <NotesOnMethod className="relative z-[1]" />

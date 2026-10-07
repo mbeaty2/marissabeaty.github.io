@@ -50,11 +50,11 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
         <FadeIn delay={220}>
           <div className="flex flex-wrap gap-8">
             <a
-              href="#work"
-              onClick={scrollTo('work')}
+              href="#collection"
+              onClick={scrollTo('collection')}
               className="inline-flex items-center gap-2 font-mono text-[13px] uppercase tracking-[0.08em] text-ink no-underline border-b border-spark pb-0.5 transition-colors hover:text-cobalt"
             >
-              View the index
+              View the collection
             </a>
             <a
               href="#contact"
