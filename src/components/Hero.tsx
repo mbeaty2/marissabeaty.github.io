@@ -11,7 +11,6 @@ const DETAILS: { term: string; detail: string }[] = [
   { term: 'Based', detail: 'London' },
   { term: 'Now', detail: 'Lecturer, UAL Creative Computing Institute' },
   { term: 'Also', detail: 'Product Consultant, Colibri Digital' },
-  { term: 'Open to', detail: 'Research and creative roles focused on data' },
 ];
 
 const Hero: React.FC<HeroProps> = ({ className }) => {
