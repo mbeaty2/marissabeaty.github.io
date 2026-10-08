@@ -26,10 +26,10 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
 
       <FadeIn delay={120}>
         <div className="flex flex-wrap gap-7 mt-8">
-          <a href="[LinkedIn link]" className="font-mono text-[13px] uppercase tracking-[0.08em] text-ink no-underline border-b border-ink pb-0.5 transition-colors hover:text-periwinkle hover:border-periwinkle">
+          <a href="[LinkedIn link]" className="font-mono text-[13px] uppercase tracking-[0.08em] text-periwinkle no-underline border-b border-periwinkle pb-0.5 transition-colors hover:text-spark hover:border-spark">
             LinkedIn
           </a>
-          <a href="[Substack link]" className="font-mono text-[13px] uppercase tracking-[0.08em] text-ink no-underline border-b border-ink pb-0.5 transition-colors hover:text-periwinkle hover:border-periwinkle">
+          <a href="[Substack link]" className="font-mono text-[13px] uppercase tracking-[0.08em] text-periwinkle no-underline border-b border-periwinkle pb-0.5 transition-colors hover:text-spark hover:border-spark">
             The Root of It All
           </a>
         </div>
@@ -42,7 +42,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
           className="flex flex-col gap-6 mt-12 max-w-xl rounded-[28px] border border-ink bg-surface2 p-8 md:p-10"
         >
           <div>
-            <label htmlFor="contact-name" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-slateline mb-1.5">
+            <label htmlFor="contact-name" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-periwinkle mb-1.5">
               Name
             </label>
             <input
@@ -55,7 +55,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
           </div>
 
           <div>
-            <label htmlFor="contact-email" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-slateline mb-1.5">
+            <label htmlFor="contact-email" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-periwinkle mb-1.5">
               Email
             </label>
             <input
@@ -68,7 +68,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
           </div>
 
           <div>
-            <label htmlFor="contact-message" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-slateline mb-1.5">
+            <label htmlFor="contact-message" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-periwinkle mb-1.5">
               Message
             </label>
             <textarea
@@ -82,7 +82,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
 
           <button
             type="submit"
-            className="self-start mt-2 inline-flex items-center rounded-full border border-ink px-7 py-2.5 font-mono text-[13px] uppercase tracking-[0.08em] text-ink transition-colors hover:bg-periwinkle hover:text-paper"
+            className="self-start mt-2 inline-flex items-center rounded-full border border-periwinkle px-7 py-2.5 font-mono text-[13px] uppercase tracking-[0.08em] text-periwinkle transition-colors hover:bg-periwinkle hover:text-paper"
           >
             Submit
           </button>
