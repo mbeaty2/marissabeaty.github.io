@@ -2,6 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
 import SectionDivider from './SectionDivider';
+import SquiggleFrame from './SquiggleFrame';
 
 interface CollectionProps {
   className?: string;
@@ -83,6 +84,19 @@ const ICONS: Record<CollectionItem['icon'], React.FC> = {
   mark: MarkIcon,
 };
 
+const FRAME_VARIANTS: (1 | 2 | 3)[] = [1, 2, 3, 2];
+
+const renderTitle = (title: string) => {
+  const words = title.split(' ');
+  const last = words.pop();
+  return (
+    <>
+      {words.join(' ')}{words.length > 0 ? ' ' : ''}
+      <em className="italic text-cobalt">{last}</em>
+    </>
+  );
+};
+
 const Collection: React.FC<CollectionProps> = ({ className }) => {
   return (
     <section id="collection" className={cn('py-20', className)}>
@@ -100,18 +114,24 @@ const Collection: React.FC<CollectionProps> = ({ className }) => {
         </FadeIn>
       </div>
 
-      <FadeIn delay={100}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-ink divide-y divide-ink sm:divide-x">
-          {COLLECTION.map((item) => {
-            const Icon = ICONS[item.icon];
-            return (
-              <div key={item.num} className="flex flex-col gap-3 p-6 min-h-[220px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
+        {COLLECTION.map((item, i) => {
+          const Icon = ICONS[item.icon];
+          return (
+            <FadeIn
+              key={item.num}
+              delay={100 + i * 70}
+              className={cn(i % 3 === 1 && 'sm:mt-10', i % 3 === 2 && 'sm:mt-4')}
+            >
+              <div className="relative flex flex-col gap-3 p-7 min-h-[220px]">
+                <SquiggleFrame variant={FRAME_VARIANTS[i % FRAME_VARIANTS.length]} className="pointer-events-none" />
+
                 <div className="w-11 h-11">
                   <Icon />
                 </div>
 
-                <p className="font-serif font-semibold uppercase tracking-[0.02em] text-[14px] leading-snug text-ink">
-                  {item.title}
+                <p className="font-serif text-[20px] leading-snug text-ink">
+                  {renderTitle(item.title)}
                 </p>
 
                 <p className="font-mono text-[10px] uppercase tracking-[0.07em] text-cobalt">
@@ -126,10 +146,10 @@ const Collection: React.FC<CollectionProps> = ({ className }) => {
                   {item.num} — {item.year}
                 </p>
               </div>
-            );
-          })}
-        </div>
-      </FadeIn>
+            </FadeIn>
+          );
+        })}
+      </div>
     </section>
   );
 };
