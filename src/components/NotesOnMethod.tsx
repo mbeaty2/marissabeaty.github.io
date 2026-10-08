@@ -54,41 +54,41 @@ const NotesOnMethod: React.FC<NotesOnMethodProps> = ({ className }) => {
   return (
     <section
       id="method"
-      className={cn('border-t border-ink bg-ink text-paper', className)}
+      className={cn('border-t border-ink text-ink', className)}
     >
       <div className="max-w-[1280px] mx-auto px-5 md:px-12 py-20">
         <div className="flex flex-wrap items-baseline justify-between gap-6 mb-10">
           <FadeIn>
-            <p className="font-mono text-xs uppercase tracking-[0.08em] text-periwinkle">
+            <p className="font-mono text-xs uppercase tracking-[0.08em] text-slateline">
               02 / About
             </p>
           </FadeIn>
           <FadeIn delay={60}>
-            <h2 className="font-serif font-light leading-[1.1] tracking-[-0.02em] text-[clamp(36px,4.6vw,60px)] text-paper">
-              Notes on <em className="italic text-periwinkle">method</em>
+            <h2 className="font-serif font-light leading-[1.1] tracking-[-0.02em] text-[clamp(36px,4.6vw,60px)] text-ink">
+              Notes on <em className="italic text-spark">method</em>
             </h2>
           </FadeIn>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <FadeIn>
-            <p className="font-serif text-lg leading-[1.65] max-w-[56ch] text-paper">
+            <p className="font-serif text-lg leading-[1.65] max-w-[56ch] text-ink">
               I trained first in art history and literature before coming to
               data science, and I think that still shapes how I work. There's
               a reason I love Impressionism: up close, the brushstrokes look
               marooned from one another, but step back and they become a
               story. That's how I think about data — each point stands alone
               until you connect the pieces. I write{' '}
-              <em className="italic text-periwinkle">The Root of It All</em>{' '}
-              on Substack, exploring where art and science meet, and I'm
-              slowly working on two novels.
+              <em className="italic text-spark">The Root of It All</em> on
+              Substack, exploring where art and science meet, and I'm slowly
+              working on two novels.
             </p>
           </FadeIn>
 
           <div className="flex flex-col gap-12">
             <FadeIn delay={100}>
               <div>
-                <p className="font-mono text-xs uppercase tracking-[0.08em] text-periwinkle mb-2">
+                <p className="font-mono text-xs uppercase tracking-[0.08em] text-spark mb-2">
                   Experience
                 </p>
                 <ol className="flex flex-col">
@@ -100,14 +100,14 @@ const NotesOnMethod: React.FC<NotesOnMethodProps> = ({ className }) => {
                         i === EXPERIENCE.length - 1 && 'border-b'
                       )}
                     >
-                      <span className="font-serif text-[32px] leading-none text-periwinkle">
+                      <span className="font-serif text-[32px] leading-none text-spark">
                         {item.year}
                       </span>
                       <div>
-                        <p className="font-mono text-[11px] uppercase tracking-[0.07em] text-paper">
+                        <p className="font-mono text-[11px] uppercase tracking-[0.07em] text-ink">
                           {item.role} — {item.org}
                         </p>
-                        <p className="mt-1 text-sm text-paper/80">{item.line}</p>
+                        <p className="mt-1 text-sm text-slateline">{item.line}</p>
                       </div>
                     </li>
                   ))}
@@ -117,7 +117,7 @@ const NotesOnMethod: React.FC<NotesOnMethodProps> = ({ className }) => {
 
             <FadeIn delay={160}>
               <div>
-                <p className="font-mono text-xs uppercase tracking-[0.08em] text-periwinkle mb-2">
+                <p className="font-mono text-xs uppercase tracking-[0.08em] text-spark mb-2">
                   Credentials
                 </p>
                 <ol className="flex flex-col">
@@ -125,11 +125,11 @@ const NotesOnMethod: React.FC<NotesOnMethodProps> = ({ className }) => {
                     <li
                       key={item.num}
                       className={cn(
-                        'grid grid-cols-[42px_1fr] gap-4 py-3 border-t border-slateline font-mono text-[13px] text-paper',
+                        'grid grid-cols-[42px_1fr] gap-4 py-3 border-t border-slateline font-mono text-[13px] text-ink',
                         i === CREDENTIALS.length - 1 && 'border-b'
                       )}
                     >
-                      <span className="text-periwinkle">{item.num}</span>
+                      <span className="text-spark">{item.num}</span>
                       <span>{item.text}</span>
                     </li>
                   ))}
