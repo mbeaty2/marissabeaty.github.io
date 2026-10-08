@@ -8,69 +8,79 @@ interface CollectionProps {
 
 interface CollectionItem {
   num: string;
-  title: React.ReactNode;
+  title: string;
   description: string;
   tag: string;
   year: string;
-  spark?: boolean;
+  icon: 'orbit' | 'mark';
 }
 
 const COLLECTION: CollectionItem[] = [
   {
     num: '01',
-    title: (
-      <>
-        Envisioning <em className="italic text-cobalt">Distant</em> Worlds
-      </>
-    ),
+    title: 'Envisioning Distant Worlds',
     description:
       'Visualising exoplanet data for a general audience — published at NeurIPS 2023 with T. Broad.',
     tag: 'Research / Visualisation',
     year: '2023',
-    spark: true,
+    icon: 'orbit',
   },
   {
     num: '02',
-    title: (
-      <>
-        [Project <em className="italic text-cobalt">title</em>]
-      </>
-    ),
+    title: '[Project title]',
     description: '[One-line description of the project.]',
     tag: '[Discipline]',
     year: '[20XX]',
+    icon: 'mark',
   },
   {
     num: '03',
-    title: (
-      <>
-        [Project <em className="italic text-cobalt">title</em>]
-      </>
-    ),
+    title: '[Project title]',
     description: '[One-line description of the project.]',
     tag: '[Discipline]',
     year: '[20XX]',
+    icon: 'mark',
   },
   {
     num: '04',
-    title: (
-      <>
-        [Project <em className="italic text-cobalt">title</em>]
-      </>
-    ),
+    title: '[Project title]',
     description: '[One-line description of the project.]',
     tag: '[Discipline]',
     year: '[20XX]',
+    icon: 'mark',
   },
 ];
 
-const SpecimenMark: React.FC = () => (
-  <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full text-slateline opacity-55" aria-hidden="true">
-    <line x1="0" y1="50" x2="100" y2="50" stroke="currentColor" strokeWidth="0.5" />
-    <line x1="50" y1="0" x2="50" y2="100" stroke="currentColor" strokeWidth="0.5" />
-    <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="0.5" fill="none" />
+const OrbitIcon: React.FC = () => (
+  <svg viewBox="0 0 48 48" className="w-full h-full text-ink" fill="none" aria-hidden="true">
+    <circle cx="24" cy="24" r="3" fill="currentColor" />
+    <ellipse cx="24" cy="24" rx="20" ry="8" stroke="currentColor" strokeWidth="1" />
+    <ellipse
+      cx="24"
+      cy="24"
+      rx="20"
+      ry="8"
+      stroke="currentColor"
+      strokeWidth="1"
+      transform="rotate(60 24 24)"
+    />
+    <circle cx="44" cy="24" r="1.5" fill="var(--spark)" />
   </svg>
 );
+
+const MarkIcon: React.FC = () => (
+  <svg viewBox="0 0 48 48" className="w-full h-full text-ink" fill="none" aria-hidden="true">
+    <rect x="6" y="6" width="36" height="36" stroke="currentColor" strokeWidth="1" />
+    <line x1="24" y1="6" x2="24" y2="42" stroke="currentColor" strokeWidth="0.75" />
+    <line x1="6" y1="24" x2="42" y2="24" stroke="currentColor" strokeWidth="0.75" />
+    <circle cx="24" cy="24" r="9" stroke="currentColor" strokeWidth="0.75" />
+  </svg>
+);
+
+const ICONS: Record<CollectionItem['icon'], React.FC> = {
+  orbit: OrbitIcon,
+  mark: MarkIcon,
+};
 
 const Collection: React.FC<CollectionProps> = ({ className }) => {
   return (
@@ -88,45 +98,36 @@ const Collection: React.FC<CollectionProps> = ({ className }) => {
         </FadeIn>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-7 gap-y-12">
-        {COLLECTION.map((item, i) => (
-          <FadeIn
-            key={item.num}
-            delay={i * 70}
-            className={cn(i % 2 === 1 && 'sm:mt-16')}
-          >
-            <figure>
-              <div className="relative aspect-[4/3] bg-mist border border-ink overflow-hidden">
-                <SpecimenMark />
-                {item.spark && (
-                  <span
-                    className="absolute top-3.5 right-3.5 w-1.5 h-1.5 rounded-full bg-spark"
-                    aria-hidden="true"
-                  />
-                )}
-                <p className="absolute inset-0 flex items-center justify-center text-center p-4 font-mono text-[11px] uppercase tracking-[0.08em] text-slateline">
-                  [Image placeholder]
+      <FadeIn delay={100}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-ink divide-y divide-ink sm:divide-x">
+          {COLLECTION.map((item) => {
+            const Icon = ICONS[item.icon];
+            return (
+              <div key={item.num} className="flex flex-col gap-3 p-6 min-h-[220px]">
+                <div className="w-11 h-11">
+                  <Icon />
+                </div>
+
+                <p className="font-serif font-semibold uppercase tracking-[0.02em] text-[14px] leading-snug text-ink">
+                  {item.title}
                 </p>
-              </div>
 
-              <div className="flex justify-between mt-3 font-mono text-[11px] uppercase tracking-[0.08em] text-slateline">
-                <span>{item.num}</span>
-                <span>{item.year}</span>
-              </div>
-
-              <figcaption>
-                <p className="mt-2.5 font-serif text-[22px] text-ink">{item.title}</p>
-                <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.07em] text-slateline">
+                <p className="font-mono text-[10px] uppercase tracking-[0.07em] text-cobalt">
                   {item.tag}
                 </p>
-                <p className="mt-2 text-[15px] text-slateline max-w-[48ch]">
+
+                <p className="text-[13px] leading-snug text-slateline">
                   {item.description}
                 </p>
-              </figcaption>
-            </figure>
-          </FadeIn>
-        ))}
-      </div>
+
+                <p className="mt-auto pt-3 font-mono text-[11px] text-slateline">
+                  {item.num} — {item.year}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </FadeIn>
     </section>
   );
 };
