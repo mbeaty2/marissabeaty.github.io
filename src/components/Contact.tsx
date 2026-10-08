@@ -50,7 +50,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
               id="contact-name"
               name="sender-name"
               required
-              className="w-full bg-transparent border-0 border-b border-ink py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-periwinkle"
+              className="w-full bg-transparent border-0 border-b border-periwinkle py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-spark"
             />
           </div>
 
@@ -63,7 +63,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
               id="contact-email"
               name="sender-email"
               required
-              className="w-full bg-transparent border-0 border-b border-ink py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-periwinkle"
+              className="w-full bg-transparent border-0 border-b border-periwinkle py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-spark"
             />
           </div>
 
@@ -76,7 +76,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
               name="message"
               rows={5}
               required
-              className="w-full bg-transparent border-0 border-b border-ink py-2 font-serif text-[17px] text-ink resize-none focus:outline-none focus-visible:border-periwinkle"
+              className="w-full bg-transparent border-0 border-b border-periwinkle py-2 font-serif text-[17px] text-ink resize-none focus:outline-none focus-visible:border-spark"
             />
           </div>
 
