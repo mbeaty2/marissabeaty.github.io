@@ -13,12 +13,19 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
       <SectionDivider variant={3} className="mb-14" />
       <FadeIn>
         <h2 className="font-serif font-light leading-[1.05] tracking-[-0.02em] text-[clamp(40px,6vw,88px)] max-w-[18ch] text-ink">
-          Let's chat!
+          Let's <em className="italic text-spark">chat</em>!
         </h2>
       </FadeIn>
 
-      <FadeIn delay={100}>
-        <div className="flex flex-wrap gap-7 mt-9">
+      <FadeIn delay={80}>
+        <p className="mt-5 font-serif text-lg text-ink max-w-[46ch]">
+          Always happy to talk data, AI, or anything in between — drop a line
+          below and I'll get back to you.
+        </p>
+      </FadeIn>
+
+      <FadeIn delay={120}>
+        <div className="flex flex-wrap gap-7 mt-8">
           <a href="[LinkedIn link]" className="font-mono text-[13px] uppercase tracking-[0.08em] text-ink no-underline border-b border-ink pb-0.5 transition-colors hover:text-cobalt hover:border-cobalt">
             LinkedIn
           </a>
@@ -28,11 +35,11 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
         </div>
       </FadeIn>
 
-      <FadeIn delay={160}>
+      <FadeIn delay={180}>
         <form
           action="https://formspree.io/f/xnqkwzbn"
           method="POST"
-          className="flex flex-col gap-6 mt-12 max-w-xl"
+          className="flex flex-col gap-6 mt-12 max-w-xl rounded-[28px] border border-ink bg-surface2 p-8 md:p-10"
         >
           <div>
             <label htmlFor="contact-name" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-slateline mb-1.5">
@@ -43,7 +50,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
               id="contact-name"
               name="sender-name"
               required
-              className="w-full bg-transparent border-0 border-b border-ink py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-cobalt"
+              className="w-full bg-transparent border-0 border-b border-ink/50 py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-cobalt"
             />
           </div>
 
@@ -56,7 +63,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
               id="contact-email"
               name="sender-email"
               required
-              className="w-full bg-transparent border-0 border-b border-ink py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-cobalt"
+              className="w-full bg-transparent border-0 border-b border-ink/50 py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-cobalt"
             />
           </div>
 
@@ -69,13 +76,13 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
               name="message"
               rows={5}
               required
-              className="w-full bg-transparent border-0 border-b border-ink py-2 font-serif text-[17px] text-ink resize-none focus:outline-none focus-visible:border-cobalt"
+              className="w-full bg-transparent border-0 border-b border-ink/50 py-2 font-serif text-[17px] text-ink resize-none focus:outline-none focus-visible:border-cobalt"
             />
           </div>
 
           <button
             type="submit"
-            className="self-start mt-2 font-mono text-[13px] uppercase tracking-[0.08em] text-ink border-b border-spark pb-0.5 transition-colors hover:text-cobalt"
+            className="self-start mt-2 inline-flex items-center rounded-full border border-ink px-7 py-2.5 font-mono text-[13px] uppercase tracking-[0.08em] text-ink transition-colors hover:bg-ink hover:text-paper"
           >
             Submit
           </button>
