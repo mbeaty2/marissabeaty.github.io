@@ -26,10 +26,10 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
 
       <FadeIn delay={120}>
         <div className="flex flex-wrap gap-7 mt-8">
-          <a href="[LinkedIn link]" className="font-mono text-[13px] uppercase tracking-[0.08em] text-ink no-underline border-b border-ink pb-0.5 transition-colors hover:text-cobalt hover:border-cobalt">
+          <a href="[LinkedIn link]" className="font-mono text-[13px] uppercase tracking-[0.08em] text-ink no-underline border-b border-ink pb-0.5 transition-colors hover:text-periwinkle hover:border-periwinkle">
             LinkedIn
           </a>
-          <a href="[Substack link]" className="font-mono text-[13px] uppercase tracking-[0.08em] text-ink no-underline border-b border-ink pb-0.5 transition-colors hover:text-cobalt hover:border-cobalt">
+          <a href="[Substack link]" className="font-mono text-[13px] uppercase tracking-[0.08em] text-ink no-underline border-b border-ink pb-0.5 transition-colors hover:text-periwinkle hover:border-periwinkle">
             The Root of It All
           </a>
         </div>
@@ -50,7 +50,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
               id="contact-name"
               name="sender-name"
               required
-              className="w-full bg-transparent border-0 border-b border-ink py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-cobalt"
+              className="w-full bg-transparent border-0 border-b border-ink py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-periwinkle"
             />
           </div>
 
@@ -63,7 +63,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
               id="contact-email"
               name="sender-email"
               required
-              className="w-full bg-transparent border-0 border-b border-ink py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-cobalt"
+              className="w-full bg-transparent border-0 border-b border-ink py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-periwinkle"
             />
           </div>
 
@@ -76,13 +76,13 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
               name="message"
               rows={5}
               required
-              className="w-full bg-transparent border-0 border-b border-ink py-2 font-serif text-[17px] text-ink resize-none focus:outline-none focus-visible:border-cobalt"
+              className="w-full bg-transparent border-0 border-b border-ink py-2 font-serif text-[17px] text-ink resize-none focus:outline-none focus-visible:border-periwinkle"
             />
           </div>
 
           <button
             type="submit"
-            className="self-start mt-2 inline-flex items-center rounded-full border border-ink px-7 py-2.5 font-mono text-[13px] uppercase tracking-[0.08em] text-ink transition-colors hover:bg-ink hover:text-paper"
+            className="self-start mt-2 inline-flex items-center rounded-full border border-ink px-7 py-2.5 font-mono text-[13px] uppercase tracking-[0.08em] text-ink transition-colors hover:bg-periwinkle hover:text-paper"
           >
             Submit
           </button>
