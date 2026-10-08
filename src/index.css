@@ -16,6 +16,7 @@
   --sage: #839958;
   --mist: #BFCBA0;
   --spark: #9B2F6B;
+  --chocolate: #4A2E1E;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -217,9 +218,20 @@ html.dark ::-webkit-scrollbar-thumb {
   scroll-margin-top: 110px;
 }
 
+.logo-mark {
+  -webkit-mask-image: url("/images/logo-mark.png");
+  mask-image: url("/images/logo-mark.png");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: left center;
+  mask-position: left center;
+}
+
 @media (prefers-color-scheme: dark) {
-  .site-logo img {
-    filter: invert(1);
+  .logo-mark {
+    background-color: var(--paper);
   }
 }
 

@@ -34,6 +34,7 @@ export default {
 				sage: 'var(--sage)',
 				mist: 'var(--mist)',
 				spark: 'var(--spark)',
+				chocolate: 'var(--chocolate)',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

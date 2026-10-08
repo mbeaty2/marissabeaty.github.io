@@ -29,11 +29,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
         onClick={scrollToSection('top')}
         className="site-logo shrink-0"
       >
-        <img
-          src="/images/logo-mark.png"
-          alt="Marissa Beaty"
-          className="h-10 md:h-12 w-auto"
-        />
+        <span role="img" aria-label="Marissa Beaty" className="logo-mark block h-10 md:h-12 aspect-[181/124] bg-chocolate" />
       </a>
 
       <nav aria-label="Primary" className="flex flex-wrap gap-7">
