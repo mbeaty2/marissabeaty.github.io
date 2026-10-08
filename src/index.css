@@ -4,26 +4,26 @@
 
 /* Field-notes design system — scoped custom properties, kept separate from
    the shadcn HSL theme tokens below so existing ui/ primitives are unaffected.
-   Botanical / cozy palette, sourced from reference moodboards (garden
-   almanac, water-lily pond, orchid). */
+   Old-book / botanical palette: off-white paper, olive accent, and a
+   blue-purple + plum pair standing in for the old cobalt/spark roles. */
 :root {
-  --paper: #F7F4D5;
-  --surface: #ECE7C4;
+  --paper: #F1EEE3;
+  --surface: #E6E1D1;
   --ink: #0A3323;
   --accent-color: #6C7E2E;
-  --accent-soft: #C7D881;
+  --accent-soft: #8E9FE0;
   --slate: #6E7C5C;
   --sage: #839958;
   --mist: #BFCBA0;
-  --spark: #D3968C;
+  --spark: #9B2F6B;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --paper: #0F1F16;
-    --ink: #F7F4D5;
+    --ink: #F1EEE3;
     --slate: #9FAE85;
-    --accent-color: #C7D881;
+    --accent-color: #8E9FE0;
   }
 }
 
