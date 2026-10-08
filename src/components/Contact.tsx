@@ -1,6 +1,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
+import SectionDivider from './SectionDivider';
 
 interface ContactProps {
   className?: string;
@@ -8,7 +9,8 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = ({ className }) => {
   return (
-    <section id="contact" className={cn('py-20 border-t border-ink', className)}>
+    <section id="contact" className={cn('py-20', className)}>
+      <SectionDivider variant={3} className="mb-14" />
       <FadeIn>
         <h2 className="font-serif font-light leading-[1.05] tracking-[-0.02em] text-[clamp(40px,6vw,88px)] max-w-[18ch] text-ink">
           Let's chat!

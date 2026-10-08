@@ -1,6 +1,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
+import SectionDivider from './SectionDivider';
 
 interface NotesOnMethodProps {
   className?: string;
@@ -54,9 +55,10 @@ const NotesOnMethod: React.FC<NotesOnMethodProps> = ({ className }) => {
   return (
     <section
       id="method"
-      className={cn('border-t border-ink text-ink', className)}
+      className={cn('text-ink', className)}
     >
       <div className="max-w-[1280px] mx-auto px-5 md:px-12 py-20">
+        <SectionDivider variant={2} className="mb-14" />
         <div className="flex flex-wrap items-baseline justify-between gap-6 mb-10">
           <FadeIn>
             <p className="font-mono text-xs uppercase tracking-[0.08em] text-slateline">

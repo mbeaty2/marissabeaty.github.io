@@ -1,6 +1,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
+import SectionDivider from './SectionDivider';
 
 interface CollectionProps {
   className?: string;
@@ -84,7 +85,8 @@ const ICONS: Record<CollectionItem['icon'], React.FC> = {
 
 const Collection: React.FC<CollectionProps> = ({ className }) => {
   return (
-    <section id="collection" className={cn('py-20 border-t border-ink', className)}>
+    <section id="collection" className={cn('py-20', className)}>
+      <SectionDivider variant={1} className="mb-14" />
       <div className="flex flex-wrap items-baseline justify-between gap-6 mb-10">
         <FadeIn>
           <p className="font-mono text-xs uppercase tracking-[0.08em] text-slateline">

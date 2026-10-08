@@ -256,13 +256,24 @@ html.dark ::-webkit-scrollbar-thumb {
   stroke-dashoffset: 0;
 }
 
+.fn-trace-wide {
+  stroke-dasharray: 2800;
+  stroke-dashoffset: 2800;
+  transition: stroke-dashoffset 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fn-trace-wide.is-visible {
+  stroke-dashoffset: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .fn-reveal {
     opacity: 1;
     transform: none;
     transition: none;
   }
-  .fn-trace {
+  .fn-trace,
+  .fn-trace-wide {
     stroke-dashoffset: 0;
     transition: none;
   }
