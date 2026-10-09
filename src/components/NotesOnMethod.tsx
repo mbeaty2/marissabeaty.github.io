@@ -70,7 +70,7 @@ const NotesOnMethod: React.FC<NotesOnMethodProps> = ({ className }) => {
           </FadeIn>
           <FadeIn delay={60}>
             <h2 className="font-serif font-light leading-[1.1] tracking-[-0.02em] text-[clamp(36px,4.6vw,60px)] text-ink">
-              Notes on <em className="italic text-spark">method</em>
+              A little about <em className="italic text-spark">me</em>
             </h2>
           </FadeIn>
         </div>
