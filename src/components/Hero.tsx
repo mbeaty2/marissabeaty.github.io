@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn, scrollToId } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
-import ConstructionDiagram from './ConstructionDiagram';
+import BotanicalDiagram from './BotanicalDiagram';
 import ImprintedStar from './ImprintedStar';
 
 interface HeroProps {
@@ -71,7 +71,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
         </FadeIn>
 
         <FadeIn delay={280}>
-          <ConstructionDiagram className="mt-2" />
+          <BotanicalDiagram className="mt-2" />
         </FadeIn>
       </div>
 
