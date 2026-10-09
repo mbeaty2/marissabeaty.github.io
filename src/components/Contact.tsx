@@ -2,7 +2,6 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
 import SectionDivider from './SectionDivider';
-import SquiggleFrame from './SquiggleFrame';
 
 interface ContactProps {
   className?: string;
@@ -40,10 +39,8 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
         <form
           action="https://formspree.io/f/xnqkwzbn"
           method="POST"
-          className="relative flex flex-col gap-6 mt-12 max-w-xl rounded-[28px] bg-surface2 p-8 md:p-10"
+          className="flex flex-col gap-6 mt-12 max-w-xl rounded-[28px] border border-ink bg-surface2 p-8 md:p-10"
         >
-          <SquiggleFrame className="pointer-events-none" />
-
           <div>
             <label htmlFor="contact-name" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-periwinkle mb-1.5">
               Name
