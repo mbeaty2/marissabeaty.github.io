@@ -28,6 +28,20 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
       <ImprintedStar className="hidden sm:block absolute bottom-6 right-20 w-6" rotate={16} />
       <ImprintedStar className="hidden sm:block absolute top-32 right-10 w-5" rotate={22} />
 
+      <FadeIn>
+        <div className="w-full max-w-[720px] mb-4 sm:mb-6 pointer-events-none select-none">
+          <img
+            src="/images/bleeding-heart-specimen.png"
+            alt="A 19th-century hand-coloured botanical illustration of Dielytra spectabilis (bleeding heart), its arching stem of heart-shaped flowers draped overhead"
+            className="w-full h-auto"
+            loading="lazy"
+          />
+          <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.07em] text-slateline">
+            Dielytra spectabilis — Journal of the Horticultural Society of London, vol. 2 (1847)
+          </p>
+        </div>
+      </FadeIn>
+
       <div className="grid grid-cols-1 md:grid-cols-[1.6fr_1fr] gap-12">
       <div className="flex flex-col gap-7">
         <FadeIn>
@@ -92,17 +106,6 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
         </dl>
       </FadeIn>
       </div>
-
-      <FadeIn delay={300}>
-        <figure className="mt-14 md:mt-16 max-w-2xl md:ml-auto border border-ink p-2 bg-[#ddd4ab]">
-          <img
-            src="/images/bleeding-heart-specimen.jpg"
-            alt="A 19th-century hand-coloured botanical plate of Dielytra spectabilis (bleeding heart), its arching stem of heart-shaped flowers draped across the page"
-            className="w-full h-auto block"
-            loading="lazy"
-          />
-        </figure>
-      </FadeIn>
     </section>
   );
 };
