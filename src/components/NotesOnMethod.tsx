@@ -2,6 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
 import SectionDivider from './SectionDivider';
+import ImprintedStar from './ImprintedStar';
 
 interface NotesOnMethodProps {
   className?: string;
@@ -55,10 +56,11 @@ const NotesOnMethod: React.FC<NotesOnMethodProps> = ({ className }) => {
   return (
     <section
       id="method"
-      className={cn('text-ink', className)}
+      className={cn('relative text-ink', className)}
     >
       <div className="max-w-[1280px] mx-auto px-5 md:px-12 py-20">
         <SectionDivider variant={2} className="mb-14" />
+        <ImprintedStar className="hidden md:block absolute top-[420px] left-16 w-9" rotate={9} />
         <div className="flex flex-wrap items-baseline justify-between gap-6 mb-10">
           <FadeIn>
             <p className="font-mono text-xs uppercase tracking-[0.08em] text-slateline">

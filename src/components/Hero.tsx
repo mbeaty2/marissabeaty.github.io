@@ -2,6 +2,7 @@ import React from 'react';
 import { cn, scrollToId } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
 import ConstructionDiagram from './ConstructionDiagram';
+import ImprintedStar from './ImprintedStar';
 
 interface HeroProps {
   className?: string;
@@ -22,8 +23,11 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
   return (
     <section
       id="top"
-      className={cn('grid grid-cols-1 md:grid-cols-[1.6fr_1fr] gap-12 py-16 md:py-24', className)}
+      className={cn('relative grid grid-cols-1 md:grid-cols-[1.6fr_1fr] gap-12 py-16 md:py-24', className)}
     >
+      <ImprintedStar className="hidden md:block absolute top-6 right-4 w-8" rotate={-10} />
+      <ImprintedStar className="hidden md:block absolute bottom-6 right-20 w-6" rotate={16} />
+
       <div className="flex flex-col gap-7">
         <FadeIn>
           <p className="font-serif italic text-2xl md:text-3xl text-ink">

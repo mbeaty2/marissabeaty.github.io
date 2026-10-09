@@ -2,6 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
 import SectionDivider from './SectionDivider';
+import ImprintedStar from './ImprintedStar';
 
 interface CollectionProps {
   className?: string;
@@ -85,8 +86,9 @@ const ICONS: Record<CollectionItem['icon'], React.FC> = {
 
 const Collection: React.FC<CollectionProps> = ({ className }) => {
   return (
-    <section id="collection" className={cn('py-20', className)}>
+    <section id="collection" className={cn('relative py-20', className)}>
       <SectionDivider variant={1} className="mb-14" />
+      <ImprintedStar className="hidden sm:block absolute top-[108px] left-1/3 w-7" rotate={-14} />
       <div className="flex flex-wrap items-baseline justify-between gap-6 mb-10">
         <FadeIn>
           <p className="font-mono text-xs uppercase tracking-[0.08em] text-slateline">
