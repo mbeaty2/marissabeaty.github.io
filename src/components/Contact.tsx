@@ -2,6 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
 import SectionDivider from './SectionDivider';
+import ImprintedFlower from './ImprintedFlower';
 
 interface ContactProps {
   className?: string;
@@ -9,8 +10,11 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = ({ className }) => {
   return (
-    <section id="contact" className={cn('py-20', className)}>
+    <section id="contact" className={cn('relative py-20', className)}>
       <SectionDivider variant={3} className="mb-14" />
+
+      <ImprintedFlower className="hidden lg:block absolute top-4 right-8 w-48 xl:w-56" />
+
       <FadeIn>
         <h2 className="font-serif font-light leading-[1.05] tracking-[-0.02em] text-[clamp(40px,6vw,88px)] max-w-[18ch] text-ink">
           Let's <em className="italic text-spark">chat</em>!
@@ -39,7 +43,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
         <form
           action="https://formspree.io/f/xnqkwzbn"
           method="POST"
-          className="flex flex-col gap-6 mt-12 max-w-xl rounded-[28px] border border-ink bg-surface2 p-8 md:p-10"
+          className="flex flex-col gap-6 mt-12 max-w-xl"
         >
           <div>
             <label htmlFor="contact-name" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-periwinkle mb-1.5">
