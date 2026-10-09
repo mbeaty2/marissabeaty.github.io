@@ -29,13 +29,16 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
       <ImprintedStar className="hidden sm:block absolute top-32 right-10 w-5" rotate={22} />
 
       <FadeIn>
-        <div className="w-full max-w-[720px] mb-4 sm:mb-6 pointer-events-none select-none">
+        <div className="relative w-full max-w-[720px] mb-4 sm:mb-6">
           <img
             src="/images/bleeding-heart-specimen.png"
             alt="A 19th-century hand-coloured botanical illustration of Dielytra spectabilis (bleeding heart), its arching stem of heart-shaped flowers draped overhead"
-            className="w-full h-auto"
+            className="w-full h-auto pointer-events-none select-none"
             loading="lazy"
           />
+          <p className="mt-2 sm:absolute sm:top-5 sm:left-2 sm:mt-0 font-serif italic text-2xl md:text-3xl text-ink">
+            I'm Marissa.
+          </p>
           <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.07em] text-slateline">
             Dielytra spectabilis — Journal of the Horticultural Society of London, vol. 2 (1847)
           </p>
@@ -44,12 +47,6 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-[1.6fr_1fr] gap-12">
       <div className="flex flex-col gap-7">
-        <FadeIn>
-          <p className="font-serif italic text-2xl md:text-3xl text-ink">
-            I'm Marissa.
-          </p>
-        </FadeIn>
-
         <FadeIn delay={80}>
           <h1 className="font-serif font-light leading-[1.05] tracking-[-0.02em] text-[clamp(48px,7.2vw,104px)] max-w-[16ch] text-ink">
             Bringing a little <em className="italic text-cobalt">humanity</em>{' '}
