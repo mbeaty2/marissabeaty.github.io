@@ -13,9 +13,10 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
     <section id="contact" className={cn('relative py-20', className)}>
       <SectionDivider variant={3} className="mb-14" />
 
-      <ImprintedStar className="hidden lg:block absolute top-2 right-16 w-10" rotate={-8} />
-      <ImprintedStar className="hidden lg:block absolute top-28 right-32 w-6" rotate={14} />
-      <ImprintedStar className="hidden lg:block absolute top-16 right-4 w-7" rotate={5} />
+      <ImprintedStar className="hidden sm:block absolute top-2 right-16 w-10" rotate={-8} />
+      <ImprintedStar className="hidden sm:block absolute top-28 right-32 w-6" rotate={14} />
+      <ImprintedStar className="hidden sm:block absolute top-16 right-4 w-7" rotate={5} />
+      <ImprintedStar className="hidden sm:block absolute top-48 right-10 w-5" rotate={-22} />
 
       <FadeIn>
         <h2 className="font-serif font-light leading-[1.05] tracking-[-0.02em] text-[clamp(40px,6vw,88px)] max-w-[18ch] text-ink">
