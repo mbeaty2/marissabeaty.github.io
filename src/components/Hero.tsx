@@ -1,7 +1,6 @@
 import React from 'react';
 import { cn, scrollToId } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
-import BotanicalDiagram from './BotanicalDiagram';
 import ImprintedStar from './ImprintedStar';
 
 interface HeroProps {
@@ -23,12 +22,13 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
   return (
     <section
       id="top"
-      className={cn('relative grid grid-cols-1 md:grid-cols-[1.6fr_1fr] gap-12 py-16 md:py-24', className)}
+      className={cn('relative py-16 md:py-24', className)}
     >
       <ImprintedStar className="hidden sm:block absolute top-6 right-4 w-8" rotate={-10} />
       <ImprintedStar className="hidden sm:block absolute bottom-6 right-20 w-6" rotate={16} />
       <ImprintedStar className="hidden sm:block absolute top-32 right-10 w-5" rotate={22} />
 
+      <div className="grid grid-cols-1 md:grid-cols-[1.6fr_1fr] gap-12">
       <div className="flex flex-col gap-7">
         <FadeIn>
           <p className="font-serif italic text-2xl md:text-3xl text-ink">
@@ -69,10 +69,6 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
             </a>
           </div>
         </FadeIn>
-
-        <FadeIn delay={280}>
-          <BotanicalDiagram className="mt-2" />
-        </FadeIn>
       </div>
 
       <FadeIn delay={200} className="pt-2">
@@ -94,6 +90,18 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
             </div>
           ))}
         </dl>
+      </FadeIn>
+      </div>
+
+      <FadeIn delay={300}>
+        <figure className="mt-14 md:mt-16 max-w-2xl md:ml-auto border border-ink p-2 bg-[#ddd4ab]">
+          <img
+            src="/images/bleeding-heart-specimen.jpg"
+            alt="A 19th-century hand-coloured botanical plate of Dielytra spectabilis (bleeding heart), its arching stem of heart-shaped flowers draped across the page"
+            className="w-full h-auto block"
+            loading="lazy"
+          />
+        </figure>
       </FadeIn>
     </section>
   );
