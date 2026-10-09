@@ -6,6 +6,7 @@ import NotesOnMethod from '@/components/NotesOnMethod';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import CursorTrail from '@/components/CursorTrail';
+import BotanicalAccent from '@/components/BotanicalAccent';
 
 const Index = () => {
   return (
@@ -28,12 +29,24 @@ const Index = () => {
       <main id="main" className="relative z-[1] max-w-[1280px] mx-auto px-5 md:px-12">
         <Hero />
         <Collection />
+        <BotanicalAccent
+          src="/images/ladys-slipper-specimen.png"
+          alt="A 19th-century hand-coloured botanical illustration of Cypripedium reginae (showy lady's slipper), a single orchid bloom above two broad ribbed leaves"
+          caption="Cypripedium reginae — The Botanical Magazine, vol. 6 (1793)"
+          align="right"
+        />
       </main>
 
       <NotesOnMethod className="relative z-[1]" />
 
       <div className="relative z-[1] max-w-[1280px] mx-auto px-5 md:px-12">
         <Contact />
+        <BotanicalAccent
+          src="/images/physochlaina-specimen.png"
+          alt="A 19th-century hand-coloured botanical illustration of Physochlaina physaloides, a cluster of deep purple bell-shaped flowers above broad green leaves"
+          caption="Physochlaina physaloides — Curtis's Botanical Magazine, 1805. Image: Flobbadob / Wikimedia Commons, CC BY 4.0"
+          align="left"
+        />
         <Footer />
       </div>
     </div>
