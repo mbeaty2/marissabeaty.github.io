@@ -26,10 +26,10 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
     >
       <ImprintedStar className="hidden sm:block absolute top-6 right-4 w-8" rotate={-10} />
       <ImprintedStar className="hidden sm:block absolute bottom-6 right-20 w-6" rotate={16} />
-      <ImprintedStar className="hidden sm:block absolute top-32 right-10 w-5" rotate={22} />
+      <ImprintedStar className="hidden lg:block absolute top-32 left-10 w-5" rotate={22} />
 
       <FadeIn>
-        <div className="relative w-full max-w-[720px] mb-4 sm:mb-6">
+        <div className="relative w-full max-w-[720px] ml-auto mb-4 sm:mb-6">
           <img
             src="/images/bleeding-heart-specimen.png"
             alt="A 19th-century hand-coloured botanical illustration of Dielytra spectabilis (bleeding heart), its arching stem of heart-shaped flowers draped overhead"
