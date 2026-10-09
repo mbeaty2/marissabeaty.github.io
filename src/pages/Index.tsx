@@ -5,10 +5,13 @@ import Collection from '@/components/Collection';
 import NotesOnMethod from '@/components/NotesOnMethod';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import CursorTrail from '@/components/CursorTrail';
 
 const Index = () => {
   return (
     <div className="fn-page min-h-screen">
+      <CursorTrail />
+
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-cobalt focus:text-paper focus:px-4 focus:py-2 focus:font-mono focus:text-[13px]"
