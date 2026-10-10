@@ -37,8 +37,8 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
 
         <FadeIn delay={80}>
           <p className="mt-5 font-serif text-lg text-ink">
-            Always happy to talk data, AI, or anything in between — drop a line
-            below and I'll get back to you.
+            Whether it's about art, data, AI, or anything in between, don't
+            hesitate to reach out and I'll get back to you.
           </p>
         </FadeIn>
 
