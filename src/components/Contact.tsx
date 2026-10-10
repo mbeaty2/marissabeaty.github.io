@@ -3,7 +3,6 @@ import { cn } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
 import SectionDivider from './SectionDivider';
 import ImprintedStar from './ImprintedStar';
-import BotanicalAccent from './BotanicalAccent';
 
 interface ContactProps {
   className?: string;
@@ -19,36 +18,51 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
       <ImprintedStar className="hidden sm:block absolute top-16 right-4 w-7" rotate={5} />
       <ImprintedStar className="hidden sm:block absolute top-48 right-10 w-5" rotate={-22} />
 
-      <FadeIn>
-        <h2 className="font-serif font-light leading-[1.05] tracking-[-0.02em] text-[clamp(40px,6vw,88px)] max-w-[18ch] text-ink">
-          Let's <em className="italic text-spark">chat</em>!
-        </h2>
-      </FadeIn>
+      <div>
+        <FadeIn>
+          <img
+            src="/images/physochlaina-specimen.png"
+            alt="A 19th-century hand-coloured botanical illustration of Physochlaina physaloides, a cluster of deep purple bell-shaped flowers above broad green leaves"
+            className="block w-full sm:float-left sm:w-full sm:max-w-[200px] md:max-w-[225px] lg:max-w-[240px] h-auto sm:mr-8 mb-4 sm:mb-3 pointer-events-none select-none"
+            style={{ shapeOutside: 'url(/images/physochlaina-specimen.png)', shapeMargin: '20px' }}
+            loading="lazy"
+          />
+        </FadeIn>
 
-      <FadeIn delay={80}>
-        <p className="mt-5 font-serif text-lg text-ink max-w-[46ch]">
-          Always happy to talk data, AI, or anything in between — drop a line
-          below and I'll get back to you.
+        <FadeIn delay={40}>
+          <h2 className="font-serif font-light leading-[1.05] tracking-[-0.02em] text-[clamp(40px,6vw,88px)] text-ink">
+            Let's <em className="italic text-spark">chat</em>!
+          </h2>
+        </FadeIn>
+
+        <FadeIn delay={80}>
+          <p className="mt-5 font-serif text-lg text-ink">
+            Always happy to talk data, AI, or anything in between — drop a line
+            below and I'll get back to you.
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={120}>
+          <div className="flex flex-wrap gap-7 mt-8">
+            <a href="[LinkedIn link]" className="font-mono text-[13px] uppercase tracking-[0.08em] text-periwinkle no-underline border-b border-periwinkle pb-0.5 transition-colors hover:text-spark hover:border-spark">
+              LinkedIn
+            </a>
+            <a href="[Substack link]" className="font-mono text-[13px] uppercase tracking-[0.08em] text-periwinkle no-underline border-b border-periwinkle pb-0.5 transition-colors hover:text-spark hover:border-spark">
+              The Root of It All
+            </a>
+          </div>
+        </FadeIn>
+
+        <p className="clear-both sm:clear-none mt-5 sm:mt-3 font-mono text-[10px] uppercase tracking-[0.07em] text-slateline">
+          Physochlaina physaloides — Curtis's Botanical Magazine, 1805. Image: Flobbadob / Wikimedia Commons, CC BY 4.0
         </p>
-      </FadeIn>
+      </div>
 
-      <FadeIn delay={120}>
-        <div className="flex flex-wrap gap-7 mt-8">
-          <a href="[LinkedIn link]" className="font-mono text-[13px] uppercase tracking-[0.08em] text-periwinkle no-underline border-b border-periwinkle pb-0.5 transition-colors hover:text-spark hover:border-spark">
-            LinkedIn
-          </a>
-          <a href="[Substack link]" className="font-mono text-[13px] uppercase tracking-[0.08em] text-periwinkle no-underline border-b border-periwinkle pb-0.5 transition-colors hover:text-spark hover:border-spark">
-            The Root of It All
-          </a>
-        </div>
-      </FadeIn>
-
-      <div className="flex flex-col lg:flex-row lg:items-start gap-6 mt-12">
-        <FadeIn delay={180} className="w-full lg:max-w-xl">
+      <FadeIn delay={180} className="clear-both mt-12">
           <form
             action="https://formspree.io/f/xnqkwzbn"
             method="POST"
-            className="flex flex-col gap-6"
+            className="flex flex-col gap-6 max-w-xl"
           >
             <div>
               <label htmlFor="contact-name" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-periwinkle mb-1.5">
@@ -96,19 +110,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
               Submit
             </button>
           </form>
-        </FadeIn>
-
-        <BotanicalAccent
-          src="/images/physochlaina-specimen.png"
-          alt="A 19th-century hand-coloured botanical illustration of Physochlaina physaloides, a cluster of deep purple bell-shaped flowers above broad green leaves"
-          caption="Physochlaina physaloides — Curtis's Botanical Magazine, 1805. Image: Flobbadob / Wikimedia Commons, CC BY 4.0"
-          align="left"
-          size="medium"
-          rotate={-6}
-          wrapperClassName="lg:order-first lg:flex-shrink-0 -mt-10 lg:-mt-6"
-          className="lg:py-0"
-        />
-      </div>
+      </FadeIn>
     </section>
   );
 };
