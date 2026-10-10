@@ -42,14 +42,31 @@ const EXPERIENCE: ExperienceItem[] = [
   },
 ];
 
-const CREDENTIALS: { num: string; text: string }[] = [
+interface CredentialItem {
+  num: string;
+  text: string;
+}
+
+const EDUCATION: CredentialItem[] = [
   { num: '3.1', text: 'MSc Data Science and Artificial Intelligence, UAL — Distinction' },
   { num: '3.2', text: 'BA Art History & English Literature, University of Wisconsin–Madison — Magna Cum Laude' },
+];
+
+const PUBLISHING: CredentialItem[] = [
   { num: '3.3', text: 'NeurIPS 2023 — Envisioning Distant Worlds, with T. Broad' },
   { num: '3.4', text: 'Community Literacy Journal, 2020 — Writing Rivers' },
-  { num: '3.5', text: 'AWS Cloud Practitioner, AWS AI Practitioner' },
-  { num: '3.6', text: 'Volunteer tour guide, Science Museum — Space Gallery' },
-  { num: '3.7', text: 'Writer, The Root of It All (Substack)' },
+  { num: '3.5', text: 'Writer, The Root of It All (Substack)' },
+];
+
+const OTHER: CredentialItem[] = [
+  { num: '3.6', text: 'AWS Cloud Practitioner, AWS AI Practitioner' },
+  { num: '3.7', text: 'Volunteer tour guide, Science Museum — Space Gallery' },
+];
+
+const CREDENTIAL_GROUPS: { label: string; items: CredentialItem[] }[] = [
+  { label: 'Education', items: EDUCATION },
+  { label: 'Publishing', items: PUBLISHING },
+  { label: 'Other', items: OTHER },
 ];
 
 const NotesOnMethod: React.FC<NotesOnMethodProps> = ({ className }) => {
@@ -120,27 +137,29 @@ const NotesOnMethod: React.FC<NotesOnMethodProps> = ({ className }) => {
               </div>
             </FadeIn>
 
-            <FadeIn delay={160}>
-              <div>
-                <p className="font-mono text-xs uppercase tracking-[0.08em] text-spark mb-2">
-                  Credentials
-                </p>
-                <ol className="flex flex-col">
-                  {CREDENTIALS.map((item, i) => (
-                    <li
-                      key={item.num}
-                      className={cn(
-                        'grid grid-cols-[42px_1fr] gap-4 py-3 border-t border-slateline font-mono text-[13px] text-ink',
-                        i === CREDENTIALS.length - 1 && 'border-b'
-                      )}
-                    >
-                      <span className="text-spark">{item.num}</span>
-                      <span>{item.text}</span>
-                    </li>
-                  ))}
-                </ol>
-              </div>
-            </FadeIn>
+            {CREDENTIAL_GROUPS.map((group, groupIndex) => (
+              <FadeIn key={group.label} delay={160 + groupIndex * 40}>
+                <div>
+                  <p className="font-mono text-xs uppercase tracking-[0.08em] text-spark mb-2">
+                    {group.label}
+                  </p>
+                  <ol className="flex flex-col">
+                    {group.items.map((item, i) => (
+                      <li
+                        key={item.num}
+                        className={cn(
+                          'grid grid-cols-[42px_1fr] gap-4 py-3 border-t border-slateline font-mono text-[13px] text-ink',
+                          i === group.items.length - 1 && 'border-b'
+                        )}
+                      >
+                        <span className="text-spark">{item.num}</span>
+                        <span>{item.text}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </div>
