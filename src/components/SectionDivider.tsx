@@ -5,6 +5,13 @@ interface SectionDividerProps {
   /** Picks among a small set of hand-drawn variants so repeats don't look identical. */
   variant?: 1 | 2 | 3;
   className?: string;
+  /**
+   * Skip the scroll-triggered reveal and render fully drawn immediately.
+   * Use for dividers right at the bottom of the page -- the IntersectionObserver's
+   * 20% threshold can fail to ever fire for the very last element on a short
+   * mobile viewport, leaving the line permanently (and only partially) drawn.
+   */
+  eager?: boolean;
 }
 
 const PATHS: Record<number, string> = {
@@ -13,11 +20,12 @@ const PATHS: Record<number, string> = {
   3: 'M0,28 C 90,46 170,12 250,30 C 300,41 330,24 320,14 C 312,6 296,10 298,20 C 300,30 322,34 346,26 C 400,8 460,46 520,28 C 560,16 540,4 528,10 C 518,15 524,26 538,28 C 580,34 630,12 680,30 C 750,52 830,8 900,30 C 950,45 980,26 970,16 C 962,8 946,12 948,22 C 950,32 972,36 996,28 C 1050,10 1120,44 1200,28',
 };
 
-const SectionDivider: React.FC<SectionDividerProps> = ({ variant = 1, className }) => {
+const SectionDivider: React.FC<SectionDividerProps> = ({ variant = 1, className, eager = false }) => {
   const ref = useRef<SVGSVGElement>(null);
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(eager);
 
   useEffect(() => {
+    if (eager) return;
     const element = ref.current;
     if (!element) return;
 
@@ -33,7 +41,7 @@ const SectionDivider: React.FC<SectionDividerProps> = ({ variant = 1, className 
 
     observer.observe(element);
     return () => observer.disconnect();
-  }, []);
+  }, [eager]);
 
   return (
     <svg
