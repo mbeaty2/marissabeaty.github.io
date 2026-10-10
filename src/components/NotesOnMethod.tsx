@@ -95,15 +95,17 @@ const NotesOnMethod: React.FC<NotesOnMethodProps> = ({ className }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <FadeIn>
             <p className="font-serif text-lg leading-[1.65] max-w-[56ch] text-ink">
-              I trained first in art history and literature before coming to
-              data science, and I think that still shapes how I work. There's
-              a reason I love Impressionism: up close, the brushstrokes look
-              marooned from one another, but step back and they become a
-              story. That's how I think about data — each point stands alone
-              until you connect the pieces. I write{' '}
-              <em className="italic text-spark">The Root of It All</em> on
-              Substack, exploring where art and science meet, and I'm slowly
-              working on two novels.
+              I first trained in art history and English literature before
+              coming to data science and AI, and I think that still shapes how
+              I work. There's a reason I love Impressionism: up close, the
+              brushstrokes look marooned from one another, but step back and
+              they all become a story. That's how I think about data — each
+              point stands alone, but when you connect the pieces, you reach
+              understanding. In addition to my work, I write{' '}
+              <em className="italic text-spark">The Root of It All</em>, where
+              I explore where art and science meet, and teach incoming
+              generations of developers at UAL's Creative Computing
+              Institute.
             </p>
           </FadeIn>
 
