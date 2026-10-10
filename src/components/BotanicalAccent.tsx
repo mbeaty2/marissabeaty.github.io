@@ -7,8 +7,8 @@ interface BotanicalAccentProps {
   alt: string;
   caption: string;
   align?: 'left' | 'right';
-  /** 'small' renders at marginalia scale, for a tucked-in-the-corner note rather than a standalone plate. */
-  size?: 'default' | 'small';
+  /** 'small' renders at marginalia scale, for a tucked-in-the-corner note rather than a standalone plate. 'medium' sits between the two. */
+  size?: 'default' | 'medium' | 'small';
   /** Degrees to tilt just the image, as if set down by hand rather than placed square. */
   rotate?: number;
   className?: string;
@@ -18,6 +18,7 @@ interface BotanicalAccentProps {
 
 const SIZE_CLASSES: Record<NonNullable<BotanicalAccentProps['size']>, string> = {
   default: 'max-w-[200px] sm:max-w-[240px]',
+  medium: 'max-w-[200px] sm:max-w-[230px] lg:max-w-[250px]',
   small: 'max-w-[110px] sm:max-w-[130px]',
 };
 
