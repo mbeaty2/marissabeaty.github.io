@@ -20,13 +20,13 @@ const EXPERIENCE: ExperienceItem[] = [
     year: '2025',
     role: 'Product Consultant',
     org: 'Colibri Digital',
-    line: 'Leading AI and data delivery across an £8M portfolio of client engagements.',
+    line: 'Advising clients on AI and data strategy, from early bets to full-scale delivery.',
   },
   {
     year: '2024',
     role: 'Product Data Scientist',
     org: 'Firemind Group',
-    line: 'Took an internal tool to a customer-facing SaaS product as product manager.',
+    line: 'Shaping product strategy for a data science tool, from prototype to customer-facing SaaS.',
   },
   {
     year: '2024',
@@ -38,7 +38,7 @@ const EXPERIENCE: ExperienceItem[] = [
     year: '2021',
     role: 'Programme Manager',
     org: 'University of Wisconsin–Madison',
-    line: 'Delivered a federally funded, multi-million-dollar programme.',
+    line: 'Coordinating budget, partners, and delivery for a federally funded programme.',
   },
 ];
 
