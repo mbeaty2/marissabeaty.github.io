@@ -54,9 +54,10 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
 
         <FadeIn delay={180}>
           <p className="font-serif text-[clamp(17px,1.6vw,20px)] leading-[1.6] text-ink mb-6">
-            I work with data and AI — as a product consultant and researcher
-            who builds tools that make complexity feel human, and writes to
-            find out what it actually means.
+            I work at the intersection of people and technology. As a product
+            consultant in Applied AI, I'm always thinking about building tools
+            that humans actually want to adopt, with a focus on making the
+            complexity of a fast-changing AI landscape feel a bit clearer.
           </p>
         </FadeIn>
 
