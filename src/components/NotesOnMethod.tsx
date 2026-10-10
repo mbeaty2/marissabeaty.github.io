@@ -20,7 +20,7 @@ const EXPERIENCE: ExperienceItem[] = [
     year: '2025',
     role: 'Product Consultant',
     org: 'Colibri Digital',
-    line: 'Leading projects end-to-end — from discovering use cases and designing AI solutions to delivering production products and advising on future-proof AI and data strategy.',
+    line: 'Leading AI projects end-to-end — from use-case discovery and solution design to production delivery and strategy advising.',
   },
   {
     year: '2024',
