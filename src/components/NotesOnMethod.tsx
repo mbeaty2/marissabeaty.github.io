@@ -20,19 +20,19 @@ const EXPERIENCE: ExperienceItem[] = [
     year: '2025',
     role: 'Product Consultant',
     org: 'Colibri Digital',
-    line: 'Advising clients on AI and data strategy, from early bets to full-scale delivery.',
+    line: 'Leading projects end-to-end — from discovering use cases and designing AI solutions to delivering production products and advising on future-proof AI and data strategy.',
   },
   {
     year: '2024',
     role: 'Product Data Scientist',
     org: 'Firemind Group',
-    line: 'Shaping product strategy for a data science tool, from prototype to customer-facing SaaS.',
+    line: "Built the company's first product line, shaping its strategy from prototype to customer-facing SaaS.",
   },
   {
     year: '2024',
     role: 'Associate Lecturer',
     org: 'University of the Arts London',
-    line: 'Teaching data science and AI to undergraduate cohorts.',
+    line: 'Teaching data science and AI to undergraduate and graduate cohorts.',
   },
   {
     year: '2021',
