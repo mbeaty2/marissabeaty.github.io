@@ -16,14 +16,19 @@
   --mist: #BFCBA0;
   --spark: #9B2F6B;
   --chocolate: #4A2E1E;
+  --emboss-highlight: rgba(255, 255, 255, 0.65);
+  --emboss-shadow: rgba(10, 51, 35, 0.22);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --paper: #0F1F16;
+    --surface: #1C2F22;
     --chocolate: #F1EEE3;
     --slate: #9FAE85;
     --accent-color: #8E9FE0;
+    --emboss-highlight: rgba(255, 255, 255, 0.45);
+    --emboss-shadow: rgba(0, 0, 0, 0.5);
   }
 }
 

@@ -21,7 +21,7 @@ const ImprintedStar: React.FC<ImprintedStarProps> = ({ className, rotate = 0 }) 
       style={{
         transform: rotate ? `rotate(${rotate}deg)` : undefined,
         filter:
-          'drop-shadow(1px 1px 0.5px rgba(255,255,255,0.65)) drop-shadow(-1px -1px 0.5px rgba(10,51,35,0.22))',
+          'drop-shadow(1px 1px 0.5px var(--emboss-highlight)) drop-shadow(-1px -1px 0.5px var(--emboss-shadow))',
       }}
       xmlns="http://www.w3.org/2000/svg"
       role="presentation"
