@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
 import SectionDivider from './SectionDivider';
 import ImprintedStar from './ImprintedStar';
+import BotanicalAccent from './BotanicalAccent';
 
 interface ContactProps {
   className?: string;
@@ -42,59 +43,69 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
         </div>
       </FadeIn>
 
-      <FadeIn delay={180}>
-        <form
-          action="https://formspree.io/f/xnqkwzbn"
-          method="POST"
-          className="flex flex-col gap-6 mt-12 max-w-xl"
-        >
-          <div>
-            <label htmlFor="contact-name" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-periwinkle mb-1.5">
-              Name
-            </label>
-            <input
-              type="text"
-              id="contact-name"
-              name="sender-name"
-              required
-              className="w-full bg-transparent border-0 border-b border-periwinkle py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-spark"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="contact-email" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-periwinkle mb-1.5">
-              Email
-            </label>
-            <input
-              type="email"
-              id="contact-email"
-              name="sender-email"
-              required
-              className="w-full bg-transparent border-0 border-b border-periwinkle py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-spark"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="contact-message" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-periwinkle mb-1.5">
-              Message
-            </label>
-            <textarea
-              id="contact-message"
-              name="message"
-              rows={5}
-              required
-              className="w-full bg-transparent border-0 border-b border-periwinkle py-2 font-serif text-[17px] text-ink resize-none focus:outline-none focus-visible:border-spark"
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="self-start mt-2 inline-flex items-center rounded-full border border-periwinkle px-7 py-2.5 font-mono text-[13px] uppercase tracking-[0.08em] text-periwinkle transition-colors hover:bg-periwinkle hover:text-paper"
+      <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-12 mt-12">
+        <FadeIn delay={180} className="w-full lg:max-w-xl">
+          <form
+            action="https://formspree.io/f/xnqkwzbn"
+            method="POST"
+            className="flex flex-col gap-6"
           >
-            Submit
-          </button>
-        </form>
-      </FadeIn>
+            <div>
+              <label htmlFor="contact-name" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-periwinkle mb-1.5">
+                Name
+              </label>
+              <input
+                type="text"
+                id="contact-name"
+                name="sender-name"
+                required
+                className="w-full bg-transparent border-0 border-b border-periwinkle py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-spark"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="contact-email" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-periwinkle mb-1.5">
+                Email
+              </label>
+              <input
+                type="email"
+                id="contact-email"
+                name="sender-email"
+                required
+                className="w-full bg-transparent border-0 border-b border-periwinkle py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-spark"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="contact-message" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-periwinkle mb-1.5">
+                Message
+              </label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows={5}
+                required
+                className="w-full bg-transparent border-0 border-b border-periwinkle py-2 font-serif text-[17px] text-ink resize-none focus:outline-none focus-visible:border-spark"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="self-start mt-2 inline-flex items-center rounded-full border border-periwinkle px-7 py-2.5 font-mono text-[13px] uppercase tracking-[0.08em] text-periwinkle transition-colors hover:bg-periwinkle hover:text-paper"
+            >
+              Submit
+            </button>
+          </form>
+        </FadeIn>
+
+        <BotanicalAccent
+          src="/images/physochlaina-specimen.png"
+          alt="A 19th-century hand-coloured botanical illustration of Physochlaina physaloides, a cluster of deep purple bell-shaped flowers above broad green leaves"
+          caption="Physochlaina physaloides — Curtis's Botanical Magazine, 1805. Image: Flobbadob / Wikimedia Commons, CC BY 4.0"
+          align="right"
+          className="lg:py-0 lg:self-start lg:flex-shrink-0"
+        />
+      </div>
     </section>
   );
 };

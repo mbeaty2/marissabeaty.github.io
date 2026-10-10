@@ -41,12 +41,6 @@ const Index = () => {
 
       <div className="relative z-[1] max-w-[1280px] mx-auto px-5 md:px-12">
         <Contact />
-        <BotanicalAccent
-          src="/images/physochlaina-specimen.png"
-          alt="A 19th-century hand-coloured botanical illustration of Physochlaina physaloides, a cluster of deep purple bell-shaped flowers above broad green leaves"
-          caption="Physochlaina physaloides — Curtis's Botanical Magazine, 1805. Image: Flobbadob / Wikimedia Commons, CC BY 4.0"
-          align="left"
-        />
         <Footer />
       </div>
     </div>
