@@ -15,6 +15,7 @@ interface CollectionItem {
   tag: string;
   year: string;
   icon: 'orbit' | 'mark';
+  href: string;
 }
 
 const COLLECTION: CollectionItem[] = [
@@ -26,30 +27,27 @@ const COLLECTION: CollectionItem[] = [
     tag: 'Research / Visualisation',
     year: '2023',
     icon: 'orbit',
+    href: 'https://neuripscreativityworkshop.github.io/2023/papers/ml4cd2023_paper09.pdf',
   },
   {
     num: '02',
-    title: '[Project title]',
-    description: '[One-line description of the project.]',
-    tag: '[Discipline]',
-    year: '[20XX]',
+    title: 'Want to Build Good Products? Treat Them Like a Video Game.',
+    description:
+      'How responsive interaction, gradual skill-building, and clear goal loops make products more engaging — with Duolingo, Notion, and Strava as examples.',
+    tag: 'Essay / Product',
+    year: '2026',
     icon: 'mark',
+    href: 'https://marissabeaty.substack.com/p/want-to-build-good-products-treat',
   },
   {
     num: '03',
-    title: '[Project title]',
-    description: '[One-line description of the project.]',
-    tag: '[Discipline]',
-    year: '[20XX]',
-    icon: 'mark',
-  },
-  {
-    num: '04',
-    title: '[Project title]',
-    description: '[One-line description of the project.]',
-    tag: '[Discipline]',
-    year: '[20XX]',
-    icon: 'mark',
+    title: "What Are Gravitational Waves? Space's Hidden Ripples",
+    description:
+      "Ripples in space-time from colliding black holes — tracing Einstein's 1916 prediction to LIGO's 2015 detection.",
+    tag: 'Essay / Science',
+    year: '2026',
+    icon: 'orbit',
+    href: 'https://marissabeaty.substack.com/p/space-surfing',
   },
 ];
 
@@ -108,12 +106,18 @@ const Collection: React.FC<CollectionProps> = ({ className }) => {
           {COLLECTION.map((item) => {
             const Icon = ICONS[item.icon];
             return (
-              <div key={item.num} className="flex flex-col gap-3 p-6 min-h-[220px]">
+              <a
+                key={item.num}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col gap-3 p-6 min-h-[220px] no-underline transition-colors hover:bg-surface2/60"
+              >
                 <div className="w-11 h-11">
                   <Icon />
                 </div>
 
-                <p className="font-serif font-semibold uppercase tracking-[0.02em] text-[14px] leading-snug text-ink">
+                <p className="font-serif font-semibold uppercase tracking-[0.02em] text-[14px] leading-snug text-ink transition-colors group-hover:text-cobalt">
                   {item.title}
                 </p>
 
@@ -128,7 +132,7 @@ const Collection: React.FC<CollectionProps> = ({ className }) => {
                 <p className="mt-auto pt-3 font-mono text-[11px] text-slateline">
                   {item.num} — {item.year}
                 </p>
-              </div>
+              </a>
             );
           })}
         </div>
