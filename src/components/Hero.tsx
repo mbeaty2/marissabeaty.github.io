@@ -9,8 +9,8 @@ interface HeroProps {
 
 const DETAILS: { term: string; detail: string }[] = [
   { term: 'Based', detail: 'London' },
-  { term: 'Now', detail: 'Lecturer, UAL Creative Computing Institute' },
-  { term: 'Also', detail: 'Product Consultant, Colibri Digital' },
+  { term: 'Now', detail: 'Product Consultant, Colibri Digital' },
+  { term: 'Also', detail: 'Lecturer, UAL Creative Computing Institute' },
 ];
 
 const Hero: React.FC<HeroProps> = ({ className }) => {
