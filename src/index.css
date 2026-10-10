@@ -234,12 +234,6 @@ html.dark ::-webkit-scrollbar-thumb {
   mask-position: left center;
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo-mark {
-    background-color: var(--paper);
-  }
-}
-
 .fn-page::before {
   content: "";
   position: fixed;
