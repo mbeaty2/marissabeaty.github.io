@@ -48,7 +48,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
           <form
             action="https://formspree.io/f/xnqkwzbn"
             method="POST"
-            className="flex flex-col gap-6"
+            className="flex flex-col gap-6 border border-ink p-8"
           >
             <div>
               <label htmlFor="contact-name" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-periwinkle mb-1.5">
@@ -102,10 +102,11 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
           src="/images/physochlaina-specimen.png"
           alt="A 19th-century hand-coloured botanical illustration of Physochlaina physaloides, a cluster of deep purple bell-shaped flowers above broad green leaves"
           caption="Physochlaina physaloides — Curtis's Botanical Magazine, 1805. Image: Flobbadob / Wikimedia Commons, CC BY 4.0"
-          align="right"
+          align="left"
           size="small"
-          rotate={5}
-          className="lg:py-0 lg:flex-shrink-0 -mt-10 lg:mt-72 lg:-ml-10"
+          rotate={-6}
+          wrapperClassName="lg:order-first lg:flex-shrink-0 -mt-10 lg:-mt-6 lg:-mr-8"
+          className="lg:py-0"
         />
       </div>
     </section>

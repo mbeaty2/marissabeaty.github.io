@@ -12,6 +12,8 @@ interface BotanicalAccentProps {
   /** Degrees to tilt just the image, as if set down by hand rather than placed square. */
   rotate?: number;
   className?: string;
+  /** Applied to the outer FadeIn wrapper itself -- use for flex-item properties like order, since className lands one level deeper. */
+  wrapperClassName?: string;
 }
 
 const SIZE_CLASSES: Record<NonNullable<BotanicalAccentProps['size']>, string> = {
@@ -27,9 +29,10 @@ const BotanicalAccent: React.FC<BotanicalAccentProps> = ({
   size = 'default',
   rotate = 0,
   className,
+  wrapperClassName,
 }) => {
   return (
-    <FadeIn>
+    <FadeIn className={wrapperClassName}>
       <div
         className={cn(
           'relative w-full py-10',
