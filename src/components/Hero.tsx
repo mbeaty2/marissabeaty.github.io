@@ -30,8 +30,9 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
 
       <FadeIn>
         <h1 className="font-serif font-light leading-[1.05] tracking-[-0.02em] text-[clamp(44px,6.6vw,92px)] max-w-[18ch] text-chocolate mb-8 sm:mb-10">
-          Bringing a little <em className="italic text-cobalt">humanity</em>{' '}
-          to <em className="italic text-cobalt">AI</em>.
+          <em className="italic text-cobalt">Technical</em> enough to build
+          it. <em className="italic text-cobalt">Humanist</em> enough to
+          question it.
         </h1>
       </FadeIn>
 
