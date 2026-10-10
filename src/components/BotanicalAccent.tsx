@@ -18,7 +18,7 @@ interface BotanicalAccentProps {
 
 const SIZE_CLASSES: Record<NonNullable<BotanicalAccentProps['size']>, string> = {
   default: 'max-w-[200px] sm:max-w-[240px]',
-  medium: 'max-w-[200px] sm:max-w-[230px] lg:max-w-[250px]',
+  medium: 'max-w-[170px] sm:max-w-[195px] lg:max-w-[210px]',
   small: 'max-w-[110px] sm:max-w-[130px]',
 };
 
