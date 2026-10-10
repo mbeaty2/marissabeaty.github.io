@@ -1,9 +1,8 @@
-
 import React from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
-import Button from './ui-custom/Button';
+import SectionDivider from './SectionDivider';
+import ImprintedStar from './ImprintedStar';
 
 interface ContactProps {
   className?: string;
@@ -11,105 +10,107 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = ({ className }) => {
   return (
-    <section id="contact" className={cn('py-20 md:py-32 bg-gray-50', className)}>
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-20">
-          <FadeIn>
-            <div className="space-y-8">
-              <div>
-                <span className="text-sm md:text-base font-medium text-blue-600 mb-2 inline-block">Get in touch</span>
-                <h2 className="text-3xl md:text-5xl font-serif font-medium tracking-tight mb-6">Let's work together</h2>
-                <p className="text-lg text-muted-foreground">
-                  I'm always interested in new opportunities and collaborations. Feel free to reach out if you'd like to discuss a project or just say hello.
-                </p>
-              </div>
+    <section id="contact" className={cn('relative py-20', className)}>
+      <SectionDivider variant={3} className="mb-14" />
 
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Mail className="text-blue-600" size={20} />
-                  <span className="text-gray-700">hello@example.com</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="text-blue-600" size={20} />
-                  <span className="text-gray-700">+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="text-blue-600" size={20} />
-                  <span className="text-gray-700">San Francisco, CA</span>
-                </div>
-              </div>
+      <ImprintedStar className="hidden sm:block absolute top-2 right-16 w-10" rotate={-8} />
+      <ImprintedStar className="hidden sm:block absolute top-28 right-32 w-6" rotate={14} />
+      <ImprintedStar className="hidden sm:block absolute top-16 right-4 w-7" rotate={5} />
+      <ImprintedStar className="hidden sm:block absolute top-48 right-10 w-5" rotate={-22} />
 
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  <Github size={24} />
-                </a>
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  <Linkedin size={24} />
-                </a>
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  <Twitter size={24} />
-                </a>
-              </div>
-            </div>
-          </FadeIn>
+      <div>
+        <FadeIn>
+          <img
+            src="/images/physochlaina-specimen.png"
+            alt="A 19th-century hand-coloured botanical illustration of Physochlaina physaloides, a cluster of deep purple bell-shaped flowers above broad green leaves"
+            className="block w-full sm:float-left sm:w-full sm:max-w-[200px] md:max-w-[225px] lg:max-w-[240px] h-auto sm:mr-8 mb-4 sm:mb-3 pointer-events-none select-none"
+            style={{ shapeOutside: 'url(/images/physochlaina-specimen.png)', shapeMargin: '20px' }}
+            loading="lazy"
+          />
+        </FadeIn>
 
-          <FadeIn delay={150}>
-            <form className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Your name"
-                />
-              </div>
+        <FadeIn delay={40}>
+          <h2 className="font-serif font-light leading-[1.05] tracking-[-0.02em] text-[clamp(40px,6vw,88px)] text-chocolate">
+            Let's <em className="italic text-spark">chat</em>!
+          </h2>
+        </FadeIn>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="your.email@example.com"
-                />
-              </div>
+        <FadeIn delay={80}>
+          <p className="mt-5 font-serif text-lg text-chocolate">
+            Whether it's about art, data, AI, or anything in between, don't
+            hesitate to reach out and I'll get back to you.
+          </p>
+        </FadeIn>
 
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Project inquiry"
-                />
-              </div>
+        <FadeIn delay={120}>
+          <div className="flex flex-wrap gap-7 mt-8">
+            <a href="[LinkedIn link]" className="font-mono text-[13px] uppercase tracking-[0.08em] text-periwinkle no-underline border-b border-periwinkle pb-0.5 transition-colors hover:text-spark hover:border-spark">
+              LinkedIn
+            </a>
+            <a href="[Substack link]" className="font-mono text-[13px] uppercase tracking-[0.08em] text-periwinkle no-underline border-b border-periwinkle pb-0.5 transition-colors hover:text-spark hover:border-spark">
+              The Root of It All
+            </a>
+          </div>
+        </FadeIn>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                  placeholder="Tell me about your project..."
-                />
-              </div>
-
-              <Button type="submit" variant="primary" size="lg" fullWidth>
-                Send Message
-              </Button>
-            </form>
-          </FadeIn>
-        </div>
+        <p className="clear-both sm:clear-none mt-5 sm:mt-3 font-mono text-[10px] uppercase tracking-[0.07em] text-slateline">
+          Physochlaina physaloides — Curtis's Botanical Magazine, 1805. Image: Flobbadob / Wikimedia Commons, CC BY 4.0
+        </p>
       </div>
+
+      <FadeIn delay={180} className="clear-both mt-12">
+          <form
+            action="https://formspree.io/f/xnqkwzbn"
+            method="POST"
+            className="flex flex-col gap-6 max-w-xl"
+          >
+            <div>
+              <label htmlFor="contact-name" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-periwinkle mb-1.5">
+                Name
+              </label>
+              <input
+                type="text"
+                id="contact-name"
+                name="sender-name"
+                required
+                className="w-full bg-transparent border-0 border-b border-periwinkle py-2 font-serif text-[17px] text-chocolate focus:outline-none focus-visible:border-spark"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="contact-email" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-periwinkle mb-1.5">
+                Email
+              </label>
+              <input
+                type="email"
+                id="contact-email"
+                name="sender-email"
+                required
+                className="w-full bg-transparent border-0 border-b border-periwinkle py-2 font-serif text-[17px] text-chocolate focus:outline-none focus-visible:border-spark"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="contact-message" className="block font-mono text-[11px] uppercase tracking-[0.08em] text-periwinkle mb-1.5">
+                Message
+              </label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows={5}
+                required
+                className="w-full bg-transparent border-0 border-b border-periwinkle py-2 font-serif text-[17px] text-chocolate resize-none focus:outline-none focus-visible:border-spark"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="self-start mt-2 inline-flex items-center rounded-full border border-periwinkle px-7 py-2.5 font-mono text-[13px] uppercase tracking-[0.08em] text-periwinkle transition-colors hover:bg-periwinkle hover:text-paper"
+            >
+              Submit
+            </button>
+          </form>
+      </FadeIn>
     </section>
   );
 };
