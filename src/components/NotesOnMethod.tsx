@@ -107,60 +107,60 @@ const NotesOnMethod: React.FC<NotesOnMethodProps> = ({ className }) => {
             </p>
           </FadeIn>
 
-          <div className="flex flex-col gap-12">
-            <FadeIn delay={100}>
+          <FadeIn delay={100}>
+            <div>
+              <p className="font-mono text-xs uppercase tracking-[0.08em] text-spark mb-2">
+                Experience
+              </p>
+              <ol className="flex flex-col">
+                {EXPERIENCE.map((item, i) => (
+                  <li
+                    key={`${item.year}-${item.role}`}
+                    className={cn(
+                      'grid grid-cols-[72px_1fr] gap-4 py-4 border-t border-slateline',
+                      i === EXPERIENCE.length - 1 && 'border-b'
+                    )}
+                  >
+                    <span className="font-serif text-[32px] leading-none text-spark">
+                      {item.year}
+                    </span>
+                    <div>
+                      <p className="font-mono text-[11px] uppercase tracking-[0.07em] text-ink">
+                        {item.role} — {item.org}
+                      </p>
+                      <p className="mt-1 text-sm text-slateline">{item.line}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </FadeIn>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-10 mt-12">
+          {CREDENTIAL_GROUPS.map((group, groupIndex) => (
+            <FadeIn key={group.label} delay={160 + groupIndex * 40}>
               <div>
                 <p className="font-mono text-xs uppercase tracking-[0.08em] text-spark mb-2">
-                  Experience
+                  {group.label}
                 </p>
                 <ol className="flex flex-col">
-                  {EXPERIENCE.map((item, i) => (
+                  {group.items.map((item, i) => (
                     <li
-                      key={`${item.year}-${item.role}`}
+                      key={item.num}
                       className={cn(
-                        'grid grid-cols-[72px_1fr] gap-4 py-4 border-t border-slateline',
-                        i === EXPERIENCE.length - 1 && 'border-b'
+                        'grid grid-cols-[42px_1fr] gap-4 py-3 border-t border-slateline font-mono text-[13px] text-ink',
+                        i === group.items.length - 1 && 'border-b'
                       )}
                     >
-                      <span className="font-serif text-[32px] leading-none text-spark">
-                        {item.year}
-                      </span>
-                      <div>
-                        <p className="font-mono text-[11px] uppercase tracking-[0.07em] text-ink">
-                          {item.role} — {item.org}
-                        </p>
-                        <p className="mt-1 text-sm text-slateline">{item.line}</p>
-                      </div>
+                      <span className="text-spark">{item.num}</span>
+                      <span>{item.text}</span>
                     </li>
                   ))}
                 </ol>
               </div>
             </FadeIn>
-
-            {CREDENTIAL_GROUPS.map((group, groupIndex) => (
-              <FadeIn key={group.label} delay={160 + groupIndex * 40}>
-                <div>
-                  <p className="font-mono text-xs uppercase tracking-[0.08em] text-spark mb-2">
-                    {group.label}
-                  </p>
-                  <ol className="flex flex-col">
-                    {group.items.map((item, i) => (
-                      <li
-                        key={item.num}
-                        className={cn(
-                          'grid grid-cols-[42px_1fr] gap-4 py-3 border-t border-slateline font-mono text-[13px] text-ink',
-                          i === group.items.length - 1 && 'border-b'
-                        )}
-                      >
-                        <span className="text-spark">{item.num}</span>
-                        <span>{item.text}</span>
-                      </li>
-                    ))}
-                  </ol>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </section>
