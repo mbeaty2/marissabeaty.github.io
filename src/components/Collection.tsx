@@ -53,7 +53,7 @@ const COLLECTION: CollectionItem[] = [
 
 /** An armillary sphere — crossed orbital rings, like an old astronomical instrument sketch. */
 const AstrolabeIcon: React.FC = () => (
-  <svg viewBox="0 0 48 48" className="w-full h-full text-ink" fill="none" aria-hidden="true">
+  <svg viewBox="0 0 48 48" className="w-full h-full text-chocolate" fill="none" aria-hidden="true">
     <circle cx="24" cy="24" r="17" stroke="currentColor" strokeWidth="0.6" />
     <ellipse cx="24" cy="24" rx="17" ry="6" stroke="currentColor" strokeWidth="0.7" />
     <ellipse cx="24" cy="24" rx="17" ry="6" stroke="currentColor" strokeWidth="0.7" transform="rotate(60 24 24)" />
@@ -71,7 +71,7 @@ const AstrolabeIcon: React.FC = () => (
 
 /** A drafting compass with its sweep traced in a dashed arc, like a geometry-study sketch. */
 const CompassIcon: React.FC = () => (
-  <svg viewBox="0 0 48 48" className="w-full h-full text-ink" fill="none" aria-hidden="true">
+  <svg viewBox="0 0 48 48" className="w-full h-full text-chocolate" fill="none" aria-hidden="true">
     <path
       d="M13 39 Q24 45 35 39"
       stroke="currentColor"
@@ -89,7 +89,7 @@ const CompassIcon: React.FC = () => (
 
 /** A measured ripple diagram, like a hand-drawn seismograph or wave study. */
 const WaveIcon: React.FC = () => (
-  <svg viewBox="0 0 48 48" className="w-full h-full text-ink" fill="none" aria-hidden="true">
+  <svg viewBox="0 0 48 48" className="w-full h-full text-chocolate" fill="none" aria-hidden="true">
     <path d="M4 18 Q10 9 16 18 T28 18 T40 18" stroke="currentColor" strokeWidth="0.5" opacity="0.45" />
     <path d="M4 24 Q10 12 16 24 T28 24 T40 24" stroke="currentColor" strokeWidth="0.9" />
     <path d="M4 30 Q10 21 16 30 T28 30 T40 30" stroke="currentColor" strokeWidth="0.5" opacity="0.45" />
@@ -117,14 +117,14 @@ const Collection: React.FC<CollectionProps> = ({ className }) => {
           </p>
         </FadeIn>
         <FadeIn delay={60}>
-          <h2 className="font-serif font-light leading-[1.1] tracking-[-0.02em] text-[clamp(36px,4.6vw,60px)] text-ink">
+          <h2 className="font-serif font-light leading-[1.1] tracking-[-0.02em] text-[clamp(36px,4.6vw,60px)] text-chocolate">
             Selected <em className="italic text-cobalt">collection</em>
           </h2>
         </FadeIn>
       </div>
 
       <FadeIn delay={100}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-ink divide-y divide-ink sm:divide-x">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-chocolate divide-y divide-chocolate sm:divide-x">
           {COLLECTION.map((item) => {
             const Icon = ICONS[item.icon];
             return (
@@ -139,7 +139,7 @@ const Collection: React.FC<CollectionProps> = ({ className }) => {
                   <Icon />
                 </div>
 
-                <p className="font-serif font-semibold uppercase tracking-[0.02em] text-[14px] leading-snug text-ink transition-colors group-hover:text-cobalt">
+                <p className="font-serif font-semibold uppercase tracking-[0.02em] text-[14px] leading-snug text-chocolate transition-colors group-hover:text-cobalt">
                   {item.title}
                 </p>
 

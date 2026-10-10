@@ -9,7 +9,6 @@
 :root {
   --paper: #F1EEE3;
   --surface: #E6E1D1;
-  --ink: #0A3323;
   --accent-color: #6C7E2E;
   --accent-soft: #4F5D8C;
   --slate: #6E7C5C;
@@ -22,7 +21,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --paper: #0F1F16;
-    --ink: #F1EEE3;
+    --chocolate: #F1EEE3;
     --slate: #9FAE85;
     --accent-color: #8E9FE0;
   }
@@ -211,7 +210,7 @@ html.dark ::-webkit-scrollbar-thumb {
 .fn-page {
   position: relative;
   background: var(--paper);
-  color: var(--ink);
+  color: var(--chocolate);
 }
 
 .fn-page [id] {
@@ -321,7 +320,7 @@ html.dark ::-webkit-scrollbar-thumb {
   display: block;
   width: 100%;
   height: 100%;
-  background: var(--ink);
+  background: var(--chocolate);
   filter: drop-shadow(0 0 2px var(--paper));
 }
 

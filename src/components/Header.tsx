@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
   return (
     <header
       className={cn(
-        'relative z-10 flex flex-wrap items-center justify-between gap-6 border-b border-ink py-4 md:py-5',
+        'relative z-10 flex flex-wrap items-center justify-between gap-6 border-b border-chocolate py-4 md:py-5',
         className
       )}
     >
@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
             key={link.id}
             href={`#${link.id}`}
             onClick={scrollToSection(link.id)}
-            className="font-mono text-[13px] uppercase tracking-[0.08em] text-ink no-underline border-b border-transparent pb-0.5 transition-colors hover:text-cobalt hover:border-cobalt focus-visible:text-cobalt focus-visible:border-cobalt"
+            className="font-mono text-[13px] uppercase tracking-[0.08em] text-chocolate no-underline border-b border-transparent pb-0.5 transition-colors hover:text-cobalt hover:border-cobalt focus-visible:text-cobalt focus-visible:border-cobalt"
           >
             {link.label}
           </a>

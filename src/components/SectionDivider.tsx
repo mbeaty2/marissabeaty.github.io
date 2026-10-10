@@ -38,7 +38,7 @@ const SectionDivider: React.FC<SectionDividerProps> = ({ variant = 1, className 
   return (
     <svg
       ref={ref}
-      className={cn('w-full h-8 md:h-10 text-ink', className)}
+      className={cn('w-full h-8 md:h-10 text-chocolate', className)}
       viewBox="0 0 1200 60"
       preserveAspectRatio="none"
       fill="none"

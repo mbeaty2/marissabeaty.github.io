@@ -73,7 +73,7 @@ const NotesOnMethod: React.FC<NotesOnMethodProps> = ({ className }) => {
   return (
     <section
       id="method"
-      className={cn('text-ink', className)}
+      className={cn('text-chocolate', className)}
     >
       <div className="relative max-w-[1280px] mx-auto px-5 md:px-12 py-20">
         <SectionDivider variant={2} className="mb-14" />
@@ -86,7 +86,7 @@ const NotesOnMethod: React.FC<NotesOnMethodProps> = ({ className }) => {
             </p>
           </FadeIn>
           <FadeIn delay={60}>
-            <h2 className="font-serif font-light leading-[1.1] tracking-[-0.02em] text-[clamp(36px,4.6vw,60px)] text-ink">
+            <h2 className="font-serif font-light leading-[1.1] tracking-[-0.02em] text-[clamp(36px,4.6vw,60px)] text-chocolate">
               A little about <em className="italic text-spark">me</em>
             </h2>
           </FadeIn>
@@ -94,7 +94,7 @@ const NotesOnMethod: React.FC<NotesOnMethodProps> = ({ className }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <FadeIn>
-            <p className="font-serif text-lg leading-[1.65] max-w-[56ch] text-ink">
+            <p className="font-serif text-lg leading-[1.65] max-w-[56ch] text-chocolate">
               I first trained in art history and English literature before
               coming to data science and AI, and I think that still shapes how
               I work. There's a reason I love Impressionism: up close, the
@@ -127,7 +127,7 @@ const NotesOnMethod: React.FC<NotesOnMethodProps> = ({ className }) => {
                       {item.year}
                     </span>
                     <div>
-                      <p className="font-mono text-[11px] uppercase tracking-[0.07em] text-ink">
+                      <p className="font-mono text-[11px] uppercase tracking-[0.07em] text-chocolate">
                         {item.role} — {item.org}
                       </p>
                       <p className="mt-1 text-sm text-slateline">{item.line}</p>
@@ -151,7 +151,7 @@ const NotesOnMethod: React.FC<NotesOnMethodProps> = ({ className }) => {
                     <li
                       key={item.num}
                       className={cn(
-                        'grid grid-cols-[42px_1fr] gap-4 py-3 border-t border-slateline font-mono text-[13px] text-ink',
+                        'grid grid-cols-[42px_1fr] gap-4 py-3 border-t border-slateline font-mono text-[13px] text-chocolate',
                         i === group.items.length - 1 && 'border-b'
                       )}
                     >

@@ -30,13 +30,13 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
         </FadeIn>
 
         <FadeIn delay={40}>
-          <h2 className="font-serif font-light leading-[1.05] tracking-[-0.02em] text-[clamp(40px,6vw,88px)] text-ink">
+          <h2 className="font-serif font-light leading-[1.05] tracking-[-0.02em] text-[clamp(40px,6vw,88px)] text-chocolate">
             Let's <em className="italic text-spark">chat</em>!
           </h2>
         </FadeIn>
 
         <FadeIn delay={80}>
-          <p className="mt-5 font-serif text-lg text-ink">
+          <p className="mt-5 font-serif text-lg text-chocolate">
             Whether it's about art, data, AI, or anything in between, don't
             hesitate to reach out and I'll get back to you.
           </p>
@@ -73,7 +73,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
                 id="contact-name"
                 name="sender-name"
                 required
-                className="w-full bg-transparent border-0 border-b border-periwinkle py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-spark"
+                className="w-full bg-transparent border-0 border-b border-periwinkle py-2 font-serif text-[17px] text-chocolate focus:outline-none focus-visible:border-spark"
               />
             </div>
 
@@ -86,7 +86,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
                 id="contact-email"
                 name="sender-email"
                 required
-                className="w-full bg-transparent border-0 border-b border-periwinkle py-2 font-serif text-[17px] text-ink focus:outline-none focus-visible:border-spark"
+                className="w-full bg-transparent border-0 border-b border-periwinkle py-2 font-serif text-[17px] text-chocolate focus:outline-none focus-visible:border-spark"
               />
             </div>
 
@@ -99,7 +99,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
                 name="message"
                 rows={5}
                 required
-                className="w-full bg-transparent border-0 border-b border-periwinkle py-2 font-serif text-[17px] text-ink resize-none focus:outline-none focus-visible:border-spark"
+                className="w-full bg-transparent border-0 border-b border-periwinkle py-2 font-serif text-[17px] text-chocolate resize-none focus:outline-none focus-visible:border-spark"
               />
             </div>
 

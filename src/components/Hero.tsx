@@ -29,7 +29,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
       <ImprintedStar className="hidden lg:block absolute top-20 left-10 w-5" rotate={22} />
 
       <FadeIn>
-        <h1 className="font-serif font-light leading-[1.05] tracking-[-0.02em] text-[clamp(44px,6.6vw,92px)] max-w-[18ch] text-ink mb-8 sm:mb-10">
+        <h1 className="font-serif font-light leading-[1.05] tracking-[-0.02em] text-[clamp(44px,6.6vw,92px)] max-w-[18ch] text-chocolate mb-8 sm:mb-10">
           Bringing a little <em className="italic text-cobalt">humanity</em>{' '}
           to <em className="italic text-cobalt">AI</em>.
         </h1>
@@ -47,13 +47,13 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
         </FadeIn>
 
         <FadeIn delay={140}>
-          <p className="font-serif italic text-2xl md:text-3xl text-ink mb-4">
+          <p className="font-serif italic text-2xl md:text-3xl text-chocolate mb-4">
             I'm Marissa.
           </p>
         </FadeIn>
 
         <FadeIn delay={180}>
-          <p className="font-serif text-[clamp(17px,1.6vw,20px)] leading-[1.6] text-ink mb-6">
+          <p className="font-serif text-[clamp(17px,1.6vw,20px)] leading-[1.6] text-chocolate mb-6">
             I work at the intersection of people and technology. As a product
             consultant in Applied AI, I'm always thinking about building tools
             that humans actually want to adopt, with a focus on making the
@@ -66,14 +66,14 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
             <a
               href="#collection"
               onClick={scrollTo('collection')}
-              className="inline-flex items-center gap-2 font-mono text-[13px] uppercase tracking-[0.08em] text-ink no-underline border-b border-spark pb-0.5 transition-colors hover:text-cobalt"
+              className="inline-flex items-center gap-2 font-mono text-[13px] uppercase tracking-[0.08em] text-chocolate no-underline border-b border-spark pb-0.5 transition-colors hover:text-cobalt"
             >
               View the collection
             </a>
             <a
               href="#contact"
               onClick={scrollTo('contact')}
-              className="inline-flex items-center gap-2 font-mono text-[13px] uppercase tracking-[0.08em] text-ink no-underline border-b border-ink pb-0.5 transition-colors hover:text-cobalt hover:border-cobalt"
+              className="inline-flex items-center gap-2 font-mono text-[13px] uppercase tracking-[0.08em] text-chocolate no-underline border-b border-chocolate pb-0.5 transition-colors hover:text-cobalt hover:border-cobalt"
             >
               Say hello
             </a>
@@ -86,13 +86,13 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
       </div>
 
       <FadeIn delay={260} className="clear-both">
-        <dl className="flex flex-col sm:flex-row sm:flex-wrap gap-x-14 gap-y-3.5 border-t border-ink mt-10 md:mt-12 pt-4">
+        <dl className="flex flex-col sm:flex-row sm:flex-wrap gap-x-14 gap-y-3.5 border-t border-chocolate mt-10 md:mt-12 pt-4">
           {DETAILS.map((item) => (
             <div key={item.term}>
               <dt className="font-mono text-[11px] uppercase tracking-[0.08em] text-slateline">
                 {item.term}
               </dt>
-              <dd className="mt-1 font-serif text-[17px] text-ink">
+              <dd className="mt-1 font-serif text-[17px] text-chocolate">
                 {item.detail}
               </dd>
             </div>

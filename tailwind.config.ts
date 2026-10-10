@@ -27,7 +27,6 @@ export default {
 			colors: {
 				paper: 'var(--paper)',
 				surface2: 'var(--surface)',
-				ink: 'var(--ink)',
 				cobalt: 'var(--accent-color)',
 				periwinkle: 'var(--accent-soft)',
 				slateline: 'var(--slate)',
