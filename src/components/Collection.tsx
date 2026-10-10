@@ -14,7 +14,7 @@ interface CollectionItem {
   description: string;
   tag: string;
   year: string;
-  icon: 'orbit' | 'mark';
+  icon: 'astrolabe' | 'compass' | 'wave';
   href: string;
 }
 
@@ -26,7 +26,7 @@ const COLLECTION: CollectionItem[] = [
       'Visualising exoplanet data for a general audience — published at NeurIPS 2023 with T. Broad.',
     tag: 'Research / Visualisation',
     year: '2023',
-    icon: 'orbit',
+    icon: 'astrolabe',
     href: 'https://neuripscreativityworkshop.github.io/2023/papers/ml4cd2023_paper09.pdf',
   },
   {
@@ -36,7 +36,7 @@ const COLLECTION: CollectionItem[] = [
       'How responsive interaction, gradual skill-building, and clear goal loops make products more engaging — with Duolingo, Notion, and Strava as examples.',
     tag: 'Essay / Product',
     year: '2026',
-    icon: 'mark',
+    icon: 'compass',
     href: 'https://marissabeaty.substack.com/p/want-to-build-good-products-treat',
   },
   {
@@ -46,40 +46,62 @@ const COLLECTION: CollectionItem[] = [
       "Ripples in space-time from colliding black holes — tracing Einstein's 1916 prediction to LIGO's 2015 detection.",
     tag: 'Essay / Science',
     year: '2026',
-    icon: 'orbit',
+    icon: 'wave',
     href: 'https://marissabeaty.substack.com/p/space-surfing',
   },
 ];
 
-const OrbitIcon: React.FC = () => (
+/** An armillary sphere — crossed orbital rings, like an old astronomical instrument sketch. */
+const AstrolabeIcon: React.FC = () => (
   <svg viewBox="0 0 48 48" className="w-full h-full text-ink" fill="none" aria-hidden="true">
-    <circle cx="24" cy="24" r="3" fill="currentColor" />
-    <ellipse cx="24" cy="24" rx="20" ry="8" stroke="currentColor" strokeWidth="1" />
-    <ellipse
-      cx="24"
-      cy="24"
-      rx="20"
-      ry="8"
-      stroke="currentColor"
-      strokeWidth="1"
-      transform="rotate(60 24 24)"
-    />
-    <circle cx="44" cy="24" r="1.5" fill="var(--spark)" />
+    <circle cx="24" cy="24" r="17" stroke="currentColor" strokeWidth="0.6" />
+    <ellipse cx="24" cy="24" rx="17" ry="6" stroke="currentColor" strokeWidth="0.7" />
+    <ellipse cx="24" cy="24" rx="17" ry="6" stroke="currentColor" strokeWidth="0.7" transform="rotate(60 24 24)" />
+    <ellipse cx="24" cy="24" rx="17" ry="6" stroke="currentColor" strokeWidth="0.7" transform="rotate(120 24 24)" />
+    <circle cx="24" cy="24" r="1.8" fill="currentColor" />
+    <g stroke="currentColor" strokeWidth="0.5">
+      <line x1="24" y1="6" x2="24" y2="9.5" />
+      <line x1="24" y1="38.5" x2="24" y2="42" />
+      <line x1="6" y1="24" x2="9.5" y2="24" />
+      <line x1="38.5" y1="24" x2="42" y2="24" />
+    </g>
+    <circle cx="41" cy="24" r="1.5" fill="var(--spark)" />
   </svg>
 );
 
-const MarkIcon: React.FC = () => (
+/** A drafting compass with its sweep traced in a dashed arc, like a geometry-study sketch. */
+const CompassIcon: React.FC = () => (
   <svg viewBox="0 0 48 48" className="w-full h-full text-ink" fill="none" aria-hidden="true">
-    <rect x="6" y="6" width="36" height="36" stroke="currentColor" strokeWidth="1" />
-    <line x1="24" y1="6" x2="24" y2="42" stroke="currentColor" strokeWidth="0.75" />
-    <line x1="6" y1="24" x2="42" y2="24" stroke="currentColor" strokeWidth="0.75" />
-    <circle cx="24" cy="24" r="9" stroke="currentColor" strokeWidth="0.75" />
+    <path
+      d="M13 39 Q24 45 35 39"
+      stroke="currentColor"
+      strokeWidth="0.5"
+      strokeDasharray="1.4 2.2"
+    />
+    <circle cx="24" cy="9" r="2.2" stroke="currentColor" strokeWidth="0.7" />
+    <line x1="22.6" y1="10.8" x2="13" y2="39" stroke="currentColor" strokeWidth="0.7" />
+    <line x1="25.4" y1="10.8" x2="35" y2="39" stroke="currentColor" strokeWidth="0.7" />
+    <line x1="18.5" y1="25" x2="29.5" y2="25" stroke="currentColor" strokeWidth="0.5" />
+    <circle cx="13" cy="39" r="1.6" fill="var(--spark)" />
+    <circle cx="35" cy="39" r="1.4" fill="currentColor" />
+  </svg>
+);
+
+/** A measured ripple diagram, like a hand-drawn seismograph or wave study. */
+const WaveIcon: React.FC = () => (
+  <svg viewBox="0 0 48 48" className="w-full h-full text-ink" fill="none" aria-hidden="true">
+    <path d="M4 18 Q10 9 16 18 T28 18 T40 18" stroke="currentColor" strokeWidth="0.5" opacity="0.45" />
+    <path d="M4 24 Q10 12 16 24 T28 24 T40 24" stroke="currentColor" strokeWidth="0.9" />
+    <path d="M4 30 Q10 21 16 30 T28 30 T40 30" stroke="currentColor" strokeWidth="0.5" opacity="0.45" />
+    <line x1="16" y1="24" x2="16" y2="12" stroke="currentColor" strokeWidth="0.5" strokeDasharray="1 1.6" />
+    <circle cx="16" cy="24" r="1.5" fill="var(--spark)" />
   </svg>
 );
 
 const ICONS: Record<CollectionItem['icon'], React.FC> = {
-  orbit: OrbitIcon,
-  mark: MarkIcon,
+  astrolabe: AstrolabeIcon,
+  compass: CompassIcon,
+  wave: WaveIcon,
 };
 
 const Collection: React.FC<CollectionProps> = ({ className }) => {
@@ -130,7 +152,7 @@ const Collection: React.FC<CollectionProps> = ({ className }) => {
                 </p>
 
                 <p className="mt-auto pt-3 font-mono text-[11px] text-slateline">
-                  {item.num} — {item.year}
+                  Figure {item.num} — {item.year}
                 </p>
               </a>
             );
