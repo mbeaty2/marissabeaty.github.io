@@ -23,7 +23,7 @@ const COLLECTION: CollectionItem[] = [
     num: '01',
     title: 'Envisioning Distant Worlds',
     description:
-      'Visualising exoplanet data for a general audience — published at NeurIPS 2023 with T. Broad.',
+      "Nobody has ever actually seen this planet. Here's one way to picture it anyway.",
     tag: 'Research / Visualisation',
     year: '2023',
     icon: 'astrolabe',
@@ -33,7 +33,7 @@ const COLLECTION: CollectionItem[] = [
     num: '02',
     title: 'Want to Build Good Products? Treat Them Like a Video Game.',
     description:
-      'How responsive interaction, gradual skill-building, and clear goal loops make products more engaging — with Duolingo, Notion, and Strava as examples.',
+      "Your favorite app is quietly borrowing tricks from video games. Here's what good product design can learn from a joystick.",
     tag: 'Essay / Product',
     year: '2026',
     icon: 'compass',
@@ -43,7 +43,7 @@ const COLLECTION: CollectionItem[] = [
     num: '03',
     title: "What Are Gravitational Waves? Space's Hidden Ripples",
     description:
-      "Ripples in space-time from colliding black holes — tracing Einstein's 1916 prediction to LIGO's 2015 detection.",
+      "Einstein predicted it in 1916 and never saw proof. A century later, a black hole collision finally rippled through space — and we caught it.",
     tag: 'Essay / Science',
     year: '2026',
     icon: 'wave',
