@@ -20,13 +20,20 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
 
       <div>
         <FadeIn>
-          <img
-            src="/images/physochlaina-specimen.png"
-            alt="A 19th-century hand-coloured botanical illustration of Physochlaina physaloides, a cluster of deep purple bell-shaped flowers above broad green leaves"
-            className="block w-full sm:float-left sm:w-full sm:max-w-[260px] md:max-w-[300px] lg:max-w-[320px] h-auto sm:mr-8 mb-4 sm:mb-3 pointer-events-none select-none"
+          <div
+            className="relative block w-full sm:float-left sm:w-full sm:max-w-[200px] md:max-w-[230px] lg:max-w-[250px] sm:mr-8 mb-16 sm:mb-14"
             style={{ shapeOutside: 'url(/images/physochlaina-specimen.png)', shapeMargin: '20px' }}
-            loading="lazy"
-          />
+          >
+            <img
+              src="/images/physochlaina-specimen.png"
+              alt="A 19th-century hand-coloured botanical illustration of Physochlaina physaloides, a cluster of deep purple bell-shaped flowers above broad green leaves"
+              className="block w-full h-auto pointer-events-none select-none"
+              loading="lazy"
+            />
+            <p className="absolute left-0 top-full mt-2 w-full font-mono text-[10px] uppercase tracking-[0.07em] text-slateline">
+              Physochlaina physaloides — Curtis's Botanical Magazine, 1805. Image: Flobbadob / Wikimedia Commons, CC BY 4.0
+            </p>
+          </div>
         </FadeIn>
 
         <FadeIn delay={40}>
@@ -52,10 +59,6 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
             </a>
           </div>
         </FadeIn>
-
-        <p className="clear-both sm:clear-none mt-5 sm:mt-3 font-mono text-[10px] uppercase tracking-[0.07em] text-slateline">
-          Physochlaina physaloides — Curtis's Botanical Magazine, 1805. Image: Flobbadob / Wikimedia Commons, CC BY 4.0
-        </p>
       </div>
 
       <FadeIn delay={180} className="clear-both mt-12">
