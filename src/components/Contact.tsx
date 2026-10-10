@@ -43,7 +43,7 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
         </div>
       </FadeIn>
 
-      <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-12 mt-12">
+      <div className="flex flex-col lg:flex-row lg:items-start gap-6 mt-12">
         <FadeIn delay={180} className="w-full lg:max-w-xl">
           <form
             action="https://formspree.io/f/xnqkwzbn"
@@ -103,7 +103,9 @@ const Contact: React.FC<ContactProps> = ({ className }) => {
           alt="A 19th-century hand-coloured botanical illustration of Physochlaina physaloides, a cluster of deep purple bell-shaped flowers above broad green leaves"
           caption="Physochlaina physaloides — Curtis's Botanical Magazine, 1805. Image: Flobbadob / Wikimedia Commons, CC BY 4.0"
           align="right"
-          className="lg:py-0 lg:self-start lg:flex-shrink-0"
+          size="small"
+          rotate={5}
+          className="lg:py-0 lg:flex-shrink-0 -mt-10 lg:mt-72 lg:-ml-10"
         />
       </div>
     </section>
