@@ -24,38 +24,36 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
       id="top"
       className={cn('relative py-16 md:py-24', className)}
     >
-      <ImprintedStar className="hidden sm:block absolute top-6 right-4 w-8" rotate={-10} />
-      <ImprintedStar className="hidden sm:block absolute bottom-6 right-20 w-6" rotate={16} />
-      <ImprintedStar className="hidden lg:block absolute top-32 left-10 w-5" rotate={22} />
+      <ImprintedStar className="hidden sm:block absolute top-0 right-4 w-7" rotate={-10} />
+      <ImprintedStar className="hidden sm:block absolute top-44 right-24 w-6" rotate={16} />
+      <ImprintedStar className="hidden lg:block absolute top-20 left-10 w-5" rotate={22} />
 
       <FadeIn>
-        <div className="relative w-full max-w-[720px] ml-auto mb-4 sm:mb-6">
+        <h1 className="font-serif font-light leading-[1.05] tracking-[-0.02em] text-[clamp(44px,6.6vw,92px)] max-w-[18ch] text-ink mb-8 sm:mb-10">
+          Bringing a little <em className="italic text-cobalt">humanity</em>{' '}
+          to <em className="italic text-cobalt">AI</em>.
+        </h1>
+      </FadeIn>
+
+      <div>
+        <FadeIn delay={80}>
           <img
             src="/images/bleeding-heart-specimen.png"
             alt="A 19th-century hand-coloured botanical illustration of Dielytra spectabilis (bleeding heart), its arching stem of heart-shaped flowers draped overhead"
-            className="w-full h-auto pointer-events-none select-none"
+            className="block w-full sm:float-right sm:w-full sm:max-w-[420px] md:max-w-[480px] lg:max-w-[540px] h-auto sm:ml-8 mb-4 sm:mb-3 pointer-events-none select-none"
+            style={{ shapeOutside: 'url(/images/bleeding-heart-specimen.png)', shapeMargin: '20px' }}
             loading="lazy"
           />
-          <p className="mt-2 sm:absolute sm:top-5 sm:left-2 sm:mt-0 font-serif italic text-2xl md:text-3xl text-ink">
-            I'm Marissa.
-          </p>
-          <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.07em] text-slateline">
-            Dielytra spectabilis — Journal of the Horticultural Society of London, vol. 2 (1847)
-          </p>
-        </div>
-      </FadeIn>
-
-      <div className="grid grid-cols-1 md:grid-cols-[1.6fr_1fr] gap-12">
-      <div className="flex flex-col gap-7">
-        <FadeIn delay={80}>
-          <h1 className="font-serif font-light leading-[1.05] tracking-[-0.02em] text-[clamp(48px,7.2vw,104px)] max-w-[16ch] text-ink">
-            Bringing a little <em className="italic text-cobalt">humanity</em>{' '}
-            to <em className="italic text-cobalt">AI</em>.
-          </h1>
         </FadeIn>
 
-        <FadeIn delay={160}>
-          <p className="font-serif text-[clamp(17px,1.6vw,20px)] leading-[1.6] max-w-[62ch] text-ink">
+        <FadeIn delay={140}>
+          <p className="font-serif italic text-2xl md:text-3xl text-ink mb-4">
+            I'm Marissa.
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={180}>
+          <p className="font-serif text-[clamp(17px,1.6vw,20px)] leading-[1.6] text-ink mb-6">
             I work with data and AI — as a product consultant and researcher
             who builds tools that make complexity feel human, and writes to
             find out what it actually means.
@@ -80,18 +78,16 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
             </a>
           </div>
         </FadeIn>
+
+        <p className="clear-both sm:clear-none sm:text-right mt-5 sm:mt-3 font-mono text-[10px] uppercase tracking-[0.07em] text-slateline">
+          Dielytra spectabilis — Journal of the Horticultural Society of London, vol. 2 (1847)
+        </p>
       </div>
 
-      <FadeIn delay={200} className="pt-2">
-        <dl className="flex flex-col gap-3.5 border-t border-ink pt-4">
-          {DETAILS.map((item, i) => (
-            <div
-              key={item.term}
-              className={cn(
-                'pb-3.5',
-                i !== DETAILS.length - 1 && 'border-b border-ink'
-              )}
-            >
+      <FadeIn delay={260} className="clear-both">
+        <dl className="flex flex-col sm:flex-row sm:flex-wrap gap-x-14 gap-y-3.5 border-t border-ink mt-10 md:mt-12 pt-4">
+          {DETAILS.map((item) => (
+            <div key={item.term}>
               <dt className="font-mono text-[11px] uppercase tracking-[0.08em] text-slateline">
                 {item.term}
               </dt>
@@ -102,7 +98,6 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
           ))}
         </dl>
       </FadeIn>
-      </div>
     </section>
   );
 };
