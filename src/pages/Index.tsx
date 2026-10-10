@@ -34,6 +34,9 @@ const Index = () => {
           alt="A 19th-century hand-coloured botanical illustration of Cypripedium reginae (showy lady's slipper), a single orchid bloom above two broad ribbed leaves"
           caption="Cypripedium reginae — The Botanical Magazine, vol. 6 (1793)"
           align="right"
+          size="small"
+          rotate={-4}
+          className="-mt-40 sm:-mt-48"
         />
       </main>
 
